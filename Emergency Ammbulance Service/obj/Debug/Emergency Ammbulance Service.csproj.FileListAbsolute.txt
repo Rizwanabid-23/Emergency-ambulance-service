@@ -1,0 +1,13 @@
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.exe.config
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.exe
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.pdb
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csprojAssemblyReference.cache
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.failed.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.loginForm.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.Properties.Resources.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.sample.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.GenerateResource.cache
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.CoreCompileInputs.cache
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.exe
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.pdb
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.admin_main.resources
