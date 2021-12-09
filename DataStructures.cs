@@ -68,6 +68,103 @@ namespace dsa2021g34
     }
 
 
+    class Person
+    {
+        public int data;
+        public Person next;
+    
+        public Person(int data) 
+        {
+            this.data = data;
+            this.next = null;
+        
+        }
+    }
+
+    class LinkList {
+        private Person head;
+
+     // public varibles and methods of link list are here
+        public LinkList() // Constructor of link list
+        {
+            head = null; 
+        } // constructor
+
+        public bool isEmpty() // function will return true if list is empty else return false
+        {
+            if (this.head == null) {
+                return true;
+
+            }
+            return false;
+        }
+        public void insertAtHead(int x) //insert at the start of list
+        {
+            Person n = new Person(x);
+            n.next = head;
+            head = n;
+            
+
+            
+        }
+
+
+        public bool searchPerson(int x) //search for data value x in the list
+        {
+            Person h = this.head;
+            while (h != null) {
+                if (h.data == x) {
+                    return true;
+                }
+                h = h.next;
+
+            }
+            return false;
+        }
+        public bool deletePerson(int x)  //delete all occurrences of x
+        {
+            Person h = this.head;
+            if (h.data == x) {
+                head = null;
+                head = head.next;
+                return true;
+            }
+            while (h.next != null) {
+                if (h.next.data == x) {
+                    //h.next = null;
+                    h.next = h.next.next;
+                    return true;
+                }
+                h = h.next;
+            }
+            return false;
+        }
+        public int size() 
+        {
+            int counter = 0;
+            Person h = this.head;
+            while(h != null) {
+                counter = counter+1;
+                h = h.next;
+            }
+            return counter;
+        }
+
+
+        public void display() 
+        {
+            Console.WriteLine("In display");
+            Person h = this.head;
+            while(h != null) {
+                Console.Write(h.data);
+                Console.Write("      n     ");
+                h = h.next;
+            }
+
+        }
+
+
+    }
  
 class Queue
     {
@@ -126,7 +223,7 @@ class Queue
         {
             return this.tail.data;
         }
-    
+}
 
     class Program
     {
