@@ -101,7 +101,6 @@ namespace Emergency_Ammbulance_Service
             this.login_user_box.Name = "login_user_box";
             this.login_user_box.Size = new System.Drawing.Size(137, 26);
             this.login_user_box.TabIndex = 5;
-            this.login_user_box.Text = "Username";
             // 
             // login_password
             // 
@@ -110,7 +109,6 @@ namespace Emergency_Ammbulance_Service
             this.login_password.Name = "login_password";
             this.login_password.Size = new System.Drawing.Size(137, 26);
             this.login_password.TabIndex = 6;
-            this.login_password.Text = "Password";
             // 
             // pin_checkBox
             // 
