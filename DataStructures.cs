@@ -165,7 +165,138 @@ namespace dsa2021g34
 
 
     }
- 
+    class NodeT {
+        public int key;
+        public NodeT parent;
+        public NodeT left;
+        public NodeT right;
+        public NodeT(int ky) {
+            this.key = ky;
+            this.parent = null;
+            this.left = null;
+            this.right = null;
+        } 
+    }
+
+
+    class Tree {
+
+        public NodeT root;
+        private NodeT NodeTFind;
+        public Tree() {
+            this.root = null;
+        }
+
+
+        public void Insert_NodeT(Tree T , int data) // Function to insert new NodeT in Tree
+        {
+            NodeT z = new NodeT(data);
+            NodeT y = null;
+            NodeT x = T.root;
+            while (x!= null) {
+                y = x;
+                if (z.key < x.key) {
+                    x = x.left;
+                }  
+                else {
+                    x = x.right;
+                }
+            }    
+            z.parent = y;
+            if (y == null) {
+                T.root = z;
+            }    
+            else if (z.key < y.key) {
+                y.left = z;
+            }
+            else {
+                y.right = z;
+            }
+        }
+
+        public void transplant(Tree t , NodeT u , NodeT v)
+        {
+            if (u.parent == null) {
+                t.root = v;
+            }
+            else if (u == u.parent.left) {
+                u.parent.left = v;
+            }
+            else {
+                u.parent.right = v;
+            }
+            if (v != null) {
+                v.parent = u.parent;
+            }
+        }
+
+        public NodeT minimumT(NodeT x) {
+            while(x.left != null) {
+                x = x.left;
+            }
+            return x;
+        }
+
+        public void deleteNodeT(Tree T , int data)
+        {
+            bool nod = this.search(data);
+            if (nod == true) {
+                if (this.NodeTFind.left == null) {
+                    this.transplant(T , this.NodeTFind , this.NodeTFind.right);
+                }
+                else if (this.NodeTFind.right == null) {
+                    this.transplant(T , this.NodeTFind , this.NodeTFind.left);
+                }
+                else {
+                    NodeT y = this.minimumT(this.NodeTFind.right);
+                    if (y.parent != this.NodeTFind) {
+                        this.transplant(T , y , y.right);
+                        y.right = this.NodeTFind.right;
+                        y.right.parent = y;
+                    }
+                    this.transplant(T , this.NodeTFind , y);
+                    y.left = this.NodeTFind.left;
+                    y.left.parent = y;
+                }
+
+            }
+            else {
+                Console.WriteLine("Not in th this Found");
+            }
+        }
+
+
+        public void In_order_Traversel(NodeT NodeT) {
+            if (NodeT != null) {
+                this.In_order_Traversel(NodeT.left);
+                Console.Write(NodeT.key);
+                this.In_order_Traversel(NodeT.right);
+            }
+
+        }
+
+        public bool search(int searchNodeT) {
+            NodeT x = this.root;
+            while(x != null && searchNodeT != x.key ) {
+                if (searchNodeT < x.key ) {
+                    x = x.left;
+                }
+                else {
+                    x = x.right;
+                }
+            }
+            if (x == null) {
+                return false;
+            }
+            this.NodeTFind = x;
+            return true;
+
+        }
+        
+    }
+
+
+
 class Queue
     {
         public Node head;
