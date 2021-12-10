@@ -11,3 +11,5 @@ C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debu
 C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.exe
 C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.pdb
 C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.admin_main.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.employee_main.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_employees.resources

@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace Emergency_Ammbulance_Service
 {
-    public partial class failed : Form
+    public partial class employee_main : Form
     {
-        public failed()
+        public employee_main()
         {
             InitializeComponent();
         }
 
-        private void try_login(object sender, EventArgs e)
+        private void log_out(object sender, EventArgs e)
         {
             this.Hide();
-            loginForm f = new loginForm();
-            f.Show();
+            loginForm login = new loginForm();
+            login.Show();
         }
     }
 }
