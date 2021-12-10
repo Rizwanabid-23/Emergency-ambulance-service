@@ -104,8 +104,6 @@ namespace dsa2021g34
             n.next = head;
             head = n;
             
-
-            
         }
 
 
@@ -355,6 +353,54 @@ class Queue
             return this.tail.data;
         }
 }
+
+
+
+    class person {
+        protected string name;
+        protected int phone;
+        protected int CNIC;
+        protected string address;
+        person(string name, int phone, int cnic , string address)
+        {
+
+            this.name = name;
+            this.address = address;
+            this.CNIC = cnic;
+            this.phone = phone;
+        }
+    }
+
+    class Employee:person {
+        protected int id;
+        private string status;
+        private int shift;
+        private int pin;
+
+        private string status;
+        public Driver(int id, string name, int phone, int cnic, string address, int shift, string status, int pin) :base(name, phone, cnic, address) {
+            this.id = id;
+            this.status = status;
+            this.shift = shift;
+            this.pin = pin;
+        }
+    }
+
+    class CRI:person {
+        private string userName;
+        private string password;
+        
+        public void addEmployee(int id, string name, int phone, int cnic, string address, int shift, string status, int pin){
+            Employee emply = new Employee(id, name, phone, cnic, address, shift, status, pin);
+
+            
+        }
+
+
+
+    }
+
+
 
     class Program
     {
