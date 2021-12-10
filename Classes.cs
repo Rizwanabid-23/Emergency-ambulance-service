@@ -1,5 +1,8 @@
 using System;
 using System.Collections;
+
+using namespace Emergency_Ammbulance_Service
+{ 
 class person
 {
     protected string name, address;
@@ -108,4 +111,6 @@ class Driver
     {   get; set;    }
     private int shift
     { get; set; }
+}
+
 }

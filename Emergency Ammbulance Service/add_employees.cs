@@ -13,29 +13,32 @@ namespace Emergency_Ammbulance_Service
 {
     public partial class add_employees : Form
     {
-        admin_main admin_CRI = new admin_main();
+        public static int counter_id=0;
         public add_employees()
         {
             InitializeComponent();
+            counter_id = File.ReadAllLines("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt").Length;
+            ID_textbox.Text = counter_id.ToString();
+            counter_id++;
         }
         
 
         private void save_employee_info(object sender, EventArgs e)
         {
-            string id = ID_textbox.Text;
+            int id = int.Parse(ID_textbox.Text);
             string name = name_textbox.Text;
-            string phone = phone_textbox.Text;
-            string cnic = cnic_textbox.Text;
+            int rating = 0;
+            int phone = int.Parse(phone_textbox.Text);
+            int cnic = int.Parse(cnic_textbox.Text);
             string adress = adress_textbox.Text;
             string shift = shift_combobox.Text;
             string employed_as = employedas_combobox.Text;
             string password = password_textbox.Text;
 
             
-            CTWO employee = new CTWO(id, name, phone, cnic, adress, shift, employed_as, password);
-            admin_CRI.employee_list.Add(employee);
+            CTWO employee = new CTWO(id, name, rating, phone, cnic, adress, shift, employed_as, password);
             File.AppendAllText("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt", null);
-            var data = employee.Id + "," + employee.Name + "," + employee.Phone + "," + employee.Cnic + "," + employee.Adress + "," + employee.Shift + "," + employee.Employed_as + "," + employee.Password;
+            var data = employee.Id + "," + employee.Name + "," + employee.Rating + "," + employee.Phone + "," + employee.Cnic + "," + employee.Adress + "," + employee.Shift + "," + employee.Employed_as + "," + employee.Password;
             File.AppendAllText("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt", data + "\n");
 
             this.Hide();

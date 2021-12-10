@@ -8,10 +8,11 @@ namespace Emergency_Ammbulance_Service
 {
     public class CTWO
     {
-        public CTWO(string id, string name, string phone, string cnic, string adress, string shift, string employed_as, string password)
+        public CTWO(int id, string name, int rating, int phone, int cnic, string adress, string shift, string employed_as, string password)
         {
             Id = id;
             Name = name;
+            Rating = rating;
             Phone = phone;
             Cnic = cnic;
             Adress = adress;
@@ -19,11 +20,12 @@ namespace Emergency_Ammbulance_Service
             Employed_as = employed_as;
             Password = password;
         }
-
-        public string Id { get; }
+      
+        public int Id { get; }
         public string Name { get; }
-        public string Phone { get; }
-        public string Cnic { get; }
+        public int Rating { get; }
+        public int Phone { get; }
+        public int Cnic { get; }
         public string Adress { get; }
         public string Shift { get; }
         public string Employed_as { get; }

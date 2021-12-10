@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace dsa2021g34
+namespace Emergency_Ammbulance_Service
 {
     class Node
     {

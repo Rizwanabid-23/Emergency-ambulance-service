@@ -55,8 +55,8 @@ namespace Emergency_Ammbulance_Service
             string[] lines = File.ReadAllLines("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt");
             foreach (string line in lines)
             {
-                string name = get_ID(line, 0);
-                string password = get_ID(line, 1);
+                string name = get_ID(line, 1);
+                string password = get_ID(line, 8);
 
                 if (username == name && pin == password)
                 {
@@ -100,7 +100,6 @@ namespace Emergency_Ammbulance_Service
             {
                 return " ";
             }
-            return null;
         }
     }
 }
