@@ -68,21 +68,9 @@ namespace Emergency_Ammbulance_Service
     }
 
 
-    class Person
-    {
-        public int data;
-        public Person next;
-    
-        public Person(int data) 
-        {
-            this.data = data;
-            this.next = null;
-        
-        }
-    }
 
     class LinkList {
-        private Person head;
+        private Employee head;
 
      // public varibles and methods of link list are here
         public LinkList() // Constructor of link list
@@ -98,38 +86,23 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
-        public void insertAtHead(int x) //insert at the start of list
+        public void insertAtHead(Employee n) //insert at the start of list
         {
-            Person n = new Person(x);
             n.next = head;
             head = n;
             
         }
 
-
-        public bool searchPerson(int x) //search for data value x in the list
+        public bool deleteperson(string x, int id)  //delete all occurrences of x
         {
-            Person h = this.head;
-            while (h != null) {
-                if (h.data == x) {
-                    return true;
-                }
-                h = h.next;
-
-            }
-            return false;
-        }
-        public bool deletePerson(int x)  //delete all occurrences of x
-        {
-            Person h = this.head;
-            if (h.data == x) {
+            Employee h = this.head;
+            if (h.name == x && h.id == id) {
                 head = null;
                 head = head.next;
                 return true;
             }
             while (h.next != null) {
-                if (h.next.data == x) {
-                    //h.next = null;
+                if (h.next.name == x && h.id == id) {
                     h.next = h.next.next;
                     return true;
                 }
@@ -140,7 +113,7 @@ namespace Emergency_Ammbulance_Service
         public int size() 
         {
             int counter = 0;
-            Person h = this.head;
+            Employee h = this.head;
             while(h != null) {
                 counter = counter+1;
                 h = h.next;
@@ -148,21 +121,61 @@ namespace Emergency_Ammbulance_Service
             return counter;
         }
 
+    }  // End of link list class
 
-        public void display() 
-        {
-            Console.WriteLine("In display");
-            Person h = this.head;
-            while(h != null) {
-                Console.Write(h.data);
-                Console.Write("      n     ");
-                h = h.next;
-            }
+    
+///////////////////////////////////////////////////////////////////////////////////
 
-        }
+    class person {
 
-
+        public string name;
+        public int phone;
+        public int CNIC;
+        public string address;
     }
+
+    class Employee:person {
+        public Employee next;
+        public int id;
+        public string status;
+        public int shift;
+        public int pin;
+
+        public Employee(int id, string name, int phone, int cnic, string address, int shift, string status, int pin) {
+            this.id = id;
+            this.status = status;
+            this.shift = shift;
+            this.pin = pin;
+            this.name = name;
+            this.address = address;
+            this.CNIC = cnic;
+            this.phone = phone;
+            this.next = null;
+        }
+    }
+
+    class CRI:person {
+        
+        private string userName;
+        private string password;
+
+        public CRI(string name, int phone, int cnic , string address) {
+            this.name = name;
+            this.address = address;
+            this.CNIC = cnic;
+            this.phone = phone;
+        }
+        LinkList l = new LinkList();
+        
+        public void addEmployee(int id, string name, int phone, int cnic, string address, int shift, string status, int pin){
+            Employee emply = new Employee(id, name, phone, cnic, address, shift, status, pin);
+            l.insertAtHead(emply);
+
+        }    
+    }
+
+
+
     class NodeT {
         public int key;
         public NodeT parent;
@@ -356,49 +369,29 @@ class Queue
 
 
 
-    class person {
-        protected string name;
-        protected int phone;
-        protected int CNIC;
-        protected string address;
-        person(string name, int phone, int cnic , string address)
-        {
-
-            this.name = name;
-            this.address = address;
-            this.CNIC = cnic;
-            this.phone = phone;
-        }
-    }
-
-    class Employee:person {
-        protected int id;
-        private string status;
-        private int shift;
-        private int pin;
-
-        private string status;
-        public Driver(int id, string name, int phone, int cnic, string address, int shift, string status, int pin) :base(name, phone, cnic, address) {
-            this.id = id;
-            this.status = status;
-            this.shift = shift;
-            this.pin = pin;
-        }
-    }
-
-    class CRI:person {
-        private string userName;
-        private string password;
-        
-        public void addEmployee(int id, string name, int phone, int cnic, string address, int shift, string status, int pin){
-            Employee emply = new Employee(id, name, phone, cnic, address, shift, status, pin);
-
-            
-        }
 
 
 
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
