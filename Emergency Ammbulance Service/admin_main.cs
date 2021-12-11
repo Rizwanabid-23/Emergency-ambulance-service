@@ -25,7 +25,7 @@ namespace Emergency_Ammbulance_Service
         public void show_Emp()
         {
             CRI cRI = CRI.Instance;
-            Employee head = cRI.head();
+            Employee head = cRI.gethead();
             Employee y = head;
             int id, rating, phone;
             Type type;
@@ -38,14 +38,10 @@ namespace Emergency_Ammbulance_Service
                 phone = y.phone;
                 type = y.type;
                 shft = y.shift;
-                dataGridView1.Rows.Add(id, Name, rating, type, shft , phone);
+                dataGridView1.Rows.Add(id, Name, rating, type, shft , phone, y.pin);
                 y = y.next;
             }
-
-
-           
-               
-            
+   
 
         }
 
@@ -137,6 +133,13 @@ namespace Emergency_Ammbulance_Service
             this.Show();
             callLogs log = new callLogs();
             log.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string key = searchKey.Text;
+            string col = searchBy.Text;
+
         }
     }
 }

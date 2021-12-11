@@ -132,7 +132,7 @@ namespace Emergency_Ammbulance_Service
             this.total_employees_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_employees_label.Location = new System.Drawing.Point(665, 78);
             this.total_employees_label.Name = "total_employees_label";
-            this.total_employees_label.Size = new System.Drawing.Size(22, 16);
+            this.total_employees_label.Size = new System.Drawing.Size(21, 16);
             this.total_employees_label.TabIndex = 40;
             this.total_employees_label.Text = "00";
             // 
@@ -225,7 +225,7 @@ namespace Emergency_Ammbulance_Service
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(665, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 16);
+            this.label7.Size = new System.Drawing.Size(21, 16);
             this.label7.TabIndex = 57;
             this.label7.Text = "00";
             // 
@@ -235,7 +235,7 @@ namespace Emergency_Ammbulance_Service
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(665, 137);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 16);
+            this.label8.Size = new System.Drawing.Size(21, 16);
             this.label8.TabIndex = 58;
             this.label8.Text = "00";
             // 
@@ -255,7 +255,7 @@ namespace Emergency_Ammbulance_Service
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(665, 167);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 16);
+            this.label10.Size = new System.Drawing.Size(21, 16);
             this.label10.TabIndex = 60;
             this.label10.Text = "00";
             // 
@@ -295,7 +295,7 @@ namespace Emergency_Ammbulance_Service
             this.dataGridView1.Location = new System.Drawing.Point(241, 262);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView1.Size = new System.Drawing.Size(593, 101);
+            this.dataGridView1.Size = new System.Drawing.Size(593, 155);
             this.dataGridView1.TabIndex = 63;
             // 
             // ID_column
