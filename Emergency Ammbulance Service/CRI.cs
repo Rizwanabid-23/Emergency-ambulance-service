@@ -25,7 +25,7 @@ namespace Emergency_Ammbulance_Service
         }
         public string Username { get; private set; }
         public string password { get; private set; }
-        public LinkList lst = new LinkList();
+        public EmpList lst = new EmpList();
         public void add_employee(Employee n) 
         {
             lst.insert(n);

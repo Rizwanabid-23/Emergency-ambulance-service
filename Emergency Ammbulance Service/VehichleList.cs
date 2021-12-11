@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace Emergency_Ammbulance_Service
 {
-    class LinkList
+    class VehichleList
     {
-        public Employee head { get; private set; }
-
-        // public varibles and methods of link list are here
-        public LinkList() // Constructor of link list
+        private Vehichle head;
+        private VehichleList()
         {
             head = null;
-        } // constructor
+        }
+        private static VehichleList vList;
+        public static VehichleList vehichleInstance()
+        {
+            if (vList == null)
+            {
+                vList = new VehichleList();
+            }
+            return vList;
+        }
+
 
         public bool isEmpty() // function will return true if list is empty else return false
         {
@@ -25,17 +33,17 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
-        public void insert(Employee n) //insert at the start of list
+        public void insert(Vehichle n) //insert at the start of list
         {
             n.next = head;
             head = n;
 
         }
 
-        public bool delete(string x, int id)  //delete all occurrences of x
+        public bool deleteVehichle(string x)  //delete all occurrences of x
         {
-            Employee h = this.head;
-            if (h.name == x && h.id == id)
+            Vehichle h = this.head;
+            if (h.number == x)
             {
                 head = null;
                 head = head.next;
@@ -43,7 +51,7 @@ namespace Emergency_Ammbulance_Service
             }
             while (h.next != null)
             {
-                if (h.next.name == x && h.id == id)
+                if (h.next.number == x)
                 {
                     h.next = h.next.next;
                     return true;
@@ -55,7 +63,7 @@ namespace Emergency_Ammbulance_Service
         public int size()
         {
             int counter = 0;
-            Employee h = this.head;
+            Vehichle h = this.head;
             while (h != null)
             {
                 counter = counter + 1;
@@ -63,7 +71,8 @@ namespace Emergency_Ammbulance_Service
             }
             return counter;
         }
-        
+
 
     }
 }
+
