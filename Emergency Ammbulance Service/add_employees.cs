@@ -18,7 +18,7 @@ namespace Emergency_Ammbulance_Service
         public add_employees()
         {
             InitializeComponent();
-            counter_id = File.ReadAllLines("employee_data.txt").Length;
+            counter_id = File.ReadAllLines("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt").Length;
             ID_textbox.Text = counter_id.ToString();
             counter_id++;
         }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 namespace Emergency_Ammbulance_Service
 {
     class Node
@@ -71,9 +68,21 @@ namespace Emergency_Ammbulance_Service
     }
 
 
+    class Person
+    {
+        public int data;
+        public Person next;
+    
+        public Person(int data) 
+        {
+            this.data = data;
+            this.next = null;
+        
+        }
+    }
 
     class LinkList {
-        private Employee head;
+        private Person head;
 
      // public varibles and methods of link list are here
         public LinkList() // Constructor of link list
@@ -89,23 +98,40 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
-        public void insertAtHead(Employee n) //insert at the start of list
+        public void insertAtHead(int x) //insert at the start of list
         {
+            Person n = new Person(x);
             n.next = head;
             head = n;
             
+
+            
         }
 
-        public bool deleteperson(string x, int id)  //delete all occurrences of x
+
+        public bool searchPerson(int x) //search for data value x in the list
         {
-            Employee h = this.head;
-            if (h.name == x && h.id == id) {
+            Person h = this.head;
+            while (h != null) {
+                if (h.data == x) {
+                    return true;
+                }
+                h = h.next;
+
+            }
+            return false;
+        }
+        public bool deletePerson(int x)  //delete all occurrences of x
+        {
+            Person h = this.head;
+            if (h.data == x) {
                 head = null;
                 head = head.next;
                 return true;
             }
             while (h.next != null) {
-                if (h.next.name == x && h.id == id) {
+                if (h.next.data == x) {
+                    //h.next = null;
                     h.next = h.next.next;
                     return true;
                 }
@@ -116,7 +142,7 @@ namespace Emergency_Ammbulance_Service
         public int size() 
         {
             int counter = 0;
-            Employee h = this.head;
+            Person h = this.head;
             while(h != null) {
                 counter = counter+1;
                 h = h.next;
@@ -124,43 +150,21 @@ namespace Emergency_Ammbulance_Service
             return counter;
         }
 
-    }  // End of link list class
 
-    
-///////////////////////////////////////////////////////////////////////////////////
+        public void display() 
+        {
+            Console.WriteLine("In display");
+            Person h = this.head;
+            while(h != null) {
+                Console.Write(h.data);
+                Console.Write("      n     ");
+                h = h.next;
+            }
 
-    class person {
-
-        public string name;
-        public int phone;
-        public int CNIC;
-        public string address;
-    }
-
-
-
-    class CRI:person {
-        
-        private string userName;
-        private string password;
-
-        public CRI(string name, int phone, int cnic , string address) {
-            this.name = name;
-            this.address = address;
-            this.CNIC = cnic;
-            this.phone = phone;
         }
-        LinkList l = new LinkList();
-        
-        public void addEmployee(int id, string name, int phone, int cnic, string address, int shift, string status, int pin){
-            Employee emply = new Employee(id, name, phone, cnic, address, shift, status, pin);
-            l.insertAtHead(emply);
 
-        }    
+
     }
-
-
-
     class NodeT {
         public int key;
         public NodeT parent;
@@ -351,7 +355,12 @@ class Queue
             return this.tail.data;
         }
 }
-/////////////////////////////////////////////////////////////////
 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+   
+        }
+    }
 }
-

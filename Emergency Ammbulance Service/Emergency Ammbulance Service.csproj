@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_ambulance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_ambulance.Designer.cs">
+      <DependentUpon>add_ambulance.cs</DependentUpon>
+    </Compile>
     <Compile Include="add_employees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,8 +64,33 @@
     <Compile Include="admin_main.Designer.cs">
       <DependentUpon>admin_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="ambulance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ambulance.Designer.cs">
+      <DependentUpon>ambulance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="analytic_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="analytic_report.Designer.cs">
+      <DependentUpon>analytic_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="callLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="callLogs.Designer.cs">
+      <DependentUpon>callLogs.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRI.cs" />
     <Compile Include="CTWO.cs" />
+    <Compile Include="dispatch_ambulance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dispatch_ambulance.Designer.cs">
+      <DependentUpon>dispatch_ambulance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpList.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="employee_main.cs">
       <SubType>Form</SubType>
@@ -73,7 +104,6 @@
     <Compile Include="failed.Designer.cs">
       <DependentUpon>failed.cs</DependentUpon>
     </Compile>
-    <Compile Include="LinkList.cs" />
     <Compile Include="login_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +111,12 @@
       <DependentUpon>login_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Node.cs" />
+    <Compile Include="path.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="path.Designer.cs">
+      <DependentUpon>path.cs</DependentUpon>
+    </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,13 +127,36 @@
     <Compile Include="sample.Designer.cs">
       <DependentUpon>sample.cs</DependentUpon>
     </Compile>
+    <Compile Include="shifts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shifts.Designer.cs">
+      <DependentUpon>shifts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stack.cs" />
     <Compile Include="Status.cs" />
+    <Compile Include="Vehichle.cs" />
+    <Compile Include="VehichleList.cs" />
+    <EmbeddedResource Include="add_ambulance.resx">
+      <DependentUpon>add_ambulance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="add_employees.resx">
       <DependentUpon>add_employees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin_main.resx">
       <DependentUpon>admin_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ambulance.resx">
+      <DependentUpon>ambulance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="analytic_report.resx">
+      <DependentUpon>analytic_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="callLogs.resx">
+      <DependentUpon>callLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dispatch_ambulance.resx">
+      <DependentUpon>dispatch_ambulance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="employee_main.resx">
       <DependentUpon>employee_main.cs</DependentUpon>
@@ -107,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login_form.resx">
       <DependentUpon>login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="path.resx">
+      <DependentUpon>path.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,6 +182,9 @@
     </Compile>
     <EmbeddedResource Include="sample.resx">
       <DependentUpon>sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shifts.resx">
+      <DependentUpon>shifts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

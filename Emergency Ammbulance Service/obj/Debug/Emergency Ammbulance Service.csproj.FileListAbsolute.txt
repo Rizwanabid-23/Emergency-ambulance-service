@@ -29,3 +29,8 @@ E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbul
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.CoreCompileInputs.cache
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.exe
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.pdb
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_ambulance.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.ambulance.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.analytic_report.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.callLogs.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.shifts.resources

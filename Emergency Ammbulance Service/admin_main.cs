@@ -110,5 +110,33 @@ namespace Emergency_Ammbulance_Service
         {
             show_Emp();
         }
+
+        private void ambulance_clcik(object sender, EventArgs e)
+        {
+            this.Hide();
+            ambulance amb = new ambulance();
+            amb.Show();
+        }
+
+        private void ctwo_report_clcik(object sender, EventArgs e)
+        {
+            this.Hide();
+            analytic_report report = new analytic_report();
+            report.Show();
+        }
+
+        private void shift_clcik(object sender, EventArgs e)
+        {
+            this.Hide();
+            shifts shifts = new shifts();
+            shifts.Show();
+        }
+
+        private void call_log_clicked(object sender, EventArgs e)
+        {
+            this.Show();
+            callLogs log = new callLogs();
+            log.Show();
+        }
     }
 }
