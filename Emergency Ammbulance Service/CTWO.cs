@@ -21,14 +21,14 @@ namespace Emergency_Ammbulance_Service
             Password = password;
         }
       
-        public int Id { get; }
-        public string Name { get; }
-        public int Rating { get; }
-        public int Phone { get; }
-        public int Cnic { get; }
-        public string Adress { get; }
-        public string Shift { get; }
-        public string Employed_as { get; }
-        public string Password { get; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Rating { get; set; }
+        public int Phone { get; set; }
+        public int Cnic { get; set; }
+        public string Adress { get; set; }
+        public string Shift { get; set; }
+        public string Employed_as { get; set; }
+        public string Password { get; set; }
     }
 }

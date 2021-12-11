@@ -1,5 +1,8 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 namespace Emergency_Ammbulance_Service
 {
     class Node
@@ -366,34 +369,7 @@ class Queue
             return this.tail.data;
         }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/////////////////////////////////////////////////////////////////
 
     class Program
     {
@@ -403,3 +379,4 @@ class Queue
         }
     }
 }
+

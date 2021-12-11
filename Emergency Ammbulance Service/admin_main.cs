@@ -14,41 +14,38 @@ namespace Emergency_Ammbulance_Service
 {
     public partial class admin_main : Form
     {
-        public ArrayList employee_list = new ArrayList();
         public admin_main()
         {
             InitializeComponent();
-            File.AppendAllText("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt", null);
-            int line_no = File.ReadAllLines("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt").Length;
-            total_employees_label.Text = line_no.ToString();
+            
+        
 
-            show_grid();
         }
 
-        private void show_grid()
+        public void show_Emp()
         {
-            string[] lines = File.ReadAllLines("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt");
-            foreach (string line in lines)
+            CRI cRI = CRI.Instance;
+            Employee head = cRI.head();
+            Employee y = head;
+            int id, rating, phone;
+            Type type;
+            Shift shft;
+            while (y != null)
             {
-                int id = int.Parse(get_ID(line, 0));
-                string name = get_ID(line, 1);
-                int rating = int.Parse(get_ID(line, 2));
-                int phone = int.Parse(get_ID(line, 3));
-                int cnic = int.Parse(get_ID(line, 4));
-                string adress = get_ID(line, 5);
-                string shift = get_ID(line, 6);
-                string position = get_ID(line, 7);
-                string password = get_ID(line, 8);
-
-                CTWO employee = new CTWO(id, name, rating, phone, cnic, adress, shift, position, password);
-                employee_list.Add(employee);
+                id = y.id;
+                Name = y.name;
+                rating = 0;
+                phone = y.phone;
+                type = y.type;
+                shft = y.shift;
+                dataGridView1.Rows.Add(id, Name, rating, type, shft , phone);
+                y = y.next;
             }
 
 
-            foreach (CTWO i in employee_list)
-            {
-                dataGridView1.Rows.Add(i.Id, i.Name, i.Rating, i.Employed_as, i.Shift, i.Phone);
-            }
+           
+               
+            
 
         }
 
@@ -102,6 +99,16 @@ namespace Emergency_Ammbulance_Service
                     ((ComboBox)c).SelectedIndex=-1;
                 }
             }
+        }
+
+        private void admin_main_Load(object sender, EventArgs e)
+        {
+            show_Emp();
+        }
+
+        private void view_Click(object sender, EventArgs e)
+        {
+            show_Emp();
         }
     }
 }

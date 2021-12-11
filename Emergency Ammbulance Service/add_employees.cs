@@ -14,10 +14,11 @@ namespace Emergency_Ammbulance_Service
     public partial class add_employees : Form
     {
         public static int counter_id=0;
+        
         public add_employees()
         {
             InitializeComponent();
-            counter_id = File.ReadAllLines("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt").Length;
+            counter_id = File.ReadAllLines("employee_data.txt").Length;
             ID_textbox.Text = counter_id.ToString();
             counter_id++;
         }
@@ -31,16 +32,18 @@ namespace Emergency_Ammbulance_Service
             int phone = int.Parse(phone_textbox.Text);
             int cnic = int.Parse(cnic_textbox.Text);
             string adress = adress_textbox.Text;
-            string shift = shift_combobox.Text;
+            string shf = shift_combobox.Text;
+            Shift shift;
+            Enum.TryParse(shf, out shift);
             string employed_as = employedas_combobox.Text;
+            Type typ;
+            Enum.TryParse(employed_as, out typ);
             string password = password_textbox.Text;
 
+            Employee emp = new Employee(id, name, phone, cnic, adress, shift, Status.Unavailable, typ, password);
+            CRI cri = CRI.Instance;
+            cri.add_employee(emp);
             
-            CTWO employee = new CTWO(id, name, rating, phone, cnic, adress, shift, employed_as, password);
-            File.AppendAllText("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt", null);
-            var data = employee.Id + "," + employee.Name + "," + employee.Rating + "," + employee.Phone + "," + employee.Cnic + "," + employee.Adress + "," + employee.Shift + "," + employee.Employed_as + "," + employee.Password;
-            File.AppendAllText("C:\\Users\\rizwa\\Documents\\GitHub\\DSA-G34\\dsa2021g34\\Emergency Ammbulance Service\\employee_data.txt", data + "\n");
-
             this.Hide();
         }
 
@@ -55,6 +58,15 @@ namespace Emergency_Ammbulance_Service
                     }
                 }
             }
+        }
+
+        private void add_employees_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void add_employees_Leave(object sender, EventArgs e)
+        {
         }
     }
 }

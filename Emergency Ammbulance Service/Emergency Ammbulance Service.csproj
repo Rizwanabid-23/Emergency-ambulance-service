@@ -58,7 +58,9 @@
     <Compile Include="admin_main.Designer.cs">
       <DependentUpon>admin_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRI.cs" />
     <Compile Include="CTWO.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="employee_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,20 +73,26 @@
     <Compile Include="failed.Designer.cs">
       <DependentUpon>failed.cs</DependentUpon>
     </Compile>
+    <Compile Include="LinkList.cs" />
     <Compile Include="login_form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login_form.Designer.cs">
       <DependentUpon>login_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Node.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue.cs" />
     <Compile Include="sample.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="sample.Designer.cs">
       <DependentUpon>sample.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stack.cs" />
+    <Compile Include="Status.cs" />
     <EmbeddedResource Include="add_employees.resx">
       <DependentUpon>add_employees.cs</DependentUpon>
     </EmbeddedResource>
