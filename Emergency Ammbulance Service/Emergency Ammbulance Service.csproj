@@ -59,7 +59,6 @@
       <DependentUpon>admin_main.cs</DependentUpon>
     </Compile>
     <Compile Include="CRI.cs" />
-    <Compile Include="CTWO.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="employee_main.cs">
       <SubType>Form</SubType>
@@ -73,7 +72,7 @@
     <Compile Include="failed.Designer.cs">
       <DependentUpon>failed.cs</DependentUpon>
     </Compile>
-    <Compile Include="LinkList.cs" />
+    <Compile Include="EmpList.cs" />
     <Compile Include="login_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +92,8 @@
     </Compile>
     <Compile Include="Stack.cs" />
     <Compile Include="Status.cs" />
+    <Compile Include="Vehichle.cs" />
+    <Compile Include="VehichleList.cs" />
     <EmbeddedResource Include="add_employees.resx">
       <DependentUpon>add_employees.cs</DependentUpon>
     </EmbeddedResource>

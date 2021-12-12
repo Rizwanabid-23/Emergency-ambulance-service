@@ -8,11 +8,17 @@ namespace Emergency_Ammbulance_Service
 {
     class VehichleList
     {
-        private Vehichle head;
+        public Vehichle head { get; private set;  }
         private VehichleList()
         {
             head = null;
         }
+
+        public Vehichle getVHead()
+        {
+            return this.head;
+        }
+
         private static VehichleList vList;
         public static VehichleList vehichleInstance()
         {
@@ -45,7 +51,6 @@ namespace Emergency_Ammbulance_Service
             Vehichle h = this.head;
             if (h.number == x)
             {
-                head = null;
                 head = head.next;
                 return true;
             }
@@ -60,6 +65,21 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
+
+        public bool verifyVehichle(string num) // Function will return true if user will true otherwise return
+        {                                               // else return false
+            Vehichle h = this.head;
+            while (h != null)
+            {
+                if (h.number == num)
+                {
+                    return true;
+                }
+                h = h.next;
+            }
+            return false;
+        }
+
         public int size()
         {
             int counter = 0;

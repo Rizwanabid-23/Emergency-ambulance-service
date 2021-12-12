@@ -23,15 +23,19 @@ namespace Emergency_Ammbulance_Service
                 return instance;
             }
         }
+
         public string Username { get; private set; }
         public string password { get; private set; }
-        public EmpList lst = new EmpList();
+
+        public EmpList eLst = EmpList.emplyInstance();
+        public VehichleList Vlst = VehichleList.vehichleInstance();
         public void add_employee(Employee n) 
         {
-            lst.insert(n);
+            eLst.insert(n);
             
         }
-        public Employee head() { return lst.head; }
+        public Employee head() { return eLst.head; }
+
 
 
         
