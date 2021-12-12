@@ -17,8 +17,6 @@ namespace Emergency_Ammbulance_Service
         public admin_main()
         {
             InitializeComponent();
-            
-        
 
         }
 
@@ -45,26 +43,7 @@ namespace Emergency_Ammbulance_Service
 
         }
 
-        private string get_ID(string statement, int position)
-        {
-            int idx = 0;
-            int comma = 0;
-            string word = "";
-            while (idx < statement.Length)
-            {
-                char c = statement[idx];
-                if (c == ',')
-                {
-                    comma++;
-                }
-                else if (comma == position)
-                {
-                    word = word + c;
-                }
-                idx++;
-            }
-            return word;
-        }
+        
 
         private void log_out(object sender, EventArgs e)
         {
@@ -104,6 +83,7 @@ namespace Emergency_Ammbulance_Service
 
         private void view_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
             show_Emp();
         }
 
@@ -137,9 +117,35 @@ namespace Emergency_Ammbulance_Service
 
         private void button4_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
+            
             string key = searchKey.Text;
             string col = searchBy.Text;
+            CRI cri = CRI.Instance;
+            Employee lst = cri.searchEmployee(col, key);
 
+            try
+            {               
+                dataGridView1.Rows.Add(lst.id, lst.name, 0, lst.type, lst.shift, lst.phone, lst.pin);
+            }
+            catch (NullReferenceException m)
+            {
+                MessageBox.Show("Found Nothing");
+            }
+
+            
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                CRI cri = CRI.Instance; 
+                    cri.searchEmployee(,);
+            }*/
+            // row.Cells["Name"].Value.ToString()
         }
     }
 }

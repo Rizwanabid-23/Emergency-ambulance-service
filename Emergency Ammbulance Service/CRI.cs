@@ -5,15 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-
 namespace Emergency_Ammbulance_Service
-{
-    
+{ 
     internal class CRI
     {
         private static CRI instance = null;
         private Employee head;
-
         private CRI()
         {
         }
@@ -104,9 +101,30 @@ namespace Emergency_Ammbulance_Service
                 y = y.next;
             }
             return false;
-        } 
-
-
+        }
+        public Employee searchEmployee(string attrib, String keyword)
+        {
+           
+            Employee employee = this.head;
+            while (employee != null)
+            {
+                if ((attrib == "Name") && (keyword == employee.name)) 
+                {
+                    return employee;
+                }
+                else if ((attrib == "Shift") && (keyword == employee.shift.ToString()))
+                {
+                     return employee;
+                }
+                else if ((attrib == "Catagory") && (keyword == employee.type.ToString()))
+                {
+                    return employee;
+                }
+                
+                employee = employee.next;
+            }
+            return employee;
+        }
     }
         
 }
