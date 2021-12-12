@@ -16,5 +16,19 @@ namespace Emergency_Ammbulance_Service
         {
             InitializeComponent();
         }
+
+        private void add_ambulance_click(object sender, EventArgs e)
+        {
+            this.Hide();
+            string plate_number = textBox1.Text;
+            ambulance_vehicle amb = new ambulance_vehicle(plate_number, Status.Available);
+            CRI cri = CRI.Instance;
+            cri.add_ambulance(amb);
+        }
+
+        private void clear_click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
     }
 }

@@ -58,6 +58,8 @@ namespace Emergency_Ammbulance_Service
             this.shiftColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.view = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -123,7 +125,7 @@ namespace Emergency_Ammbulance_Service
             "ID",
             "Name",
             "Rating"});
-            this.comboBox1.Location = new System.Drawing.Point(480, 133);
+            this.comboBox1.Location = new System.Drawing.Point(480, 120);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 20;
@@ -137,7 +139,7 @@ namespace Emergency_Ammbulance_Service
             "Type",
             "Shift",
             "Phone"});
-            this.searchBy.Location = new System.Drawing.Point(299, 177);
+            this.searchBy.Location = new System.Drawing.Point(299, 162);
             this.searchBy.Name = "searchBy";
             this.searchBy.Size = new System.Drawing.Size(121, 21);
             this.searchBy.TabIndex = 21;
@@ -149,14 +151,14 @@ namespace Emergency_Ammbulance_Service
             this.comboBox3.Items.AddRange(new object[] {
             "Acending",
             "Descending"});
-            this.comboBox3.Location = new System.Drawing.Point(480, 177);
+            this.comboBox3.Location = new System.Drawing.Point(480, 162);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 22;
             // 
             // searchKey
             // 
-            this.searchKey.Location = new System.Drawing.Point(299, 133);
+            this.searchKey.Location = new System.Drawing.Point(299, 120);
             this.searchKey.Name = "searchKey";
             this.searchKey.Size = new System.Drawing.Size(121, 20);
             this.searchKey.TabIndex = 23;
@@ -165,7 +167,7 @@ namespace Emergency_Ammbulance_Service
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(643, 131);
+            this.button1.Location = new System.Drawing.Point(643, 120);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 23);
             this.button1.TabIndex = 24;
@@ -176,9 +178,9 @@ namespace Emergency_Ammbulance_Service
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(659, 177);
+            this.button2.Location = new System.Drawing.Point(667, 162);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 23);
+            this.button2.Size = new System.Drawing.Size(71, 23);
             this.button2.TabIndex = 25;
             this.button2.Text = "Clear filters";
             this.button2.UseVisualStyleBackColor = true;
@@ -187,7 +189,7 @@ namespace Emergency_Ammbulance_Service
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(508, 204);
+            this.button3.Location = new System.Drawing.Point(508, 195);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 26;
@@ -197,7 +199,7 @@ namespace Emergency_Ammbulance_Service
             // searchBtn
             // 
             this.searchBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBtn.Location = new System.Drawing.Point(324, 204);
+            this.searchBtn.Location = new System.Drawing.Point(324, 195);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(75, 23);
             this.searchBtn.TabIndex = 27;
@@ -288,7 +290,7 @@ namespace Emergency_Ammbulance_Service
             this.shiftColumn,
             this.phoneColumn,
             this.Password});
-            this.dataGridView1.Location = new System.Drawing.Point(230, 259);
+            this.dataGridView1.Location = new System.Drawing.Point(253, 249);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(652, 236);
@@ -356,6 +358,26 @@ namespace Emergency_Ammbulance_Service
             this.Password.HeaderText = "Pin";
             this.Password.Name = "Password";
             this.Password.ReadOnly = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(27)))), ((int)(((byte)(0)))));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(224, 428);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // view
+            // 
+            this.view.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view.Location = new System.Drawing.Point(667, 220);
+            this.view.Name = "view";
+            this.view.Size = new System.Drawing.Size(71, 23);
+            this.view.TabIndex = 35;
+            this.view.Text = "Refresh";
+            this.view.UseVisualStyleBackColor = true;
+            this.view.Click += new System.EventHandler(this.view_Click);
             // 
             // admin_main
             // 

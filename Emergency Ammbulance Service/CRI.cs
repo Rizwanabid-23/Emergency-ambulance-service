@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 using System.IO;
 
 namespace Emergency_Ammbulance_Service
-{ 
+
+{
     internal class CRI
     {
         private static CRI instance = null;
         private Employee head;
+        private ambulance_vehicle Ahead;
+
         private CRI()
         {
         }
-        public static CRI Instance {
-            get {
+        public static CRI Instance
+        {
+            get
+            {
                 if (instance == null)
                 {
                     instance = new CRI();
@@ -23,16 +28,31 @@ namespace Emergency_Ammbulance_Service
                 return instance;
             }
         }
-        public string Username { get; private set; }
-        public string password { get; private set; }
+        //public string Username { get; private set; }
+        //public string password { get; private set; }
+
         public EmpList lst = EmpList.Instance;
+        public ambulance_list a_list = ambulance_list.vehichleInstance();
+
+        public void add_ambulance(ambulance_vehicle a)
+        {
+            a_list.insert(a);
+            this.Ahead = a_list.head;
+        }
+        public ambulance_vehicle get_amb_head()
+        {
+            return this.Ahead;
+        }
+
         public void add_employee(Employee n) 
         {
             lst.insert(n);
             this.head = lst.head;
-            
         }
-        public Employee gethead() { return this.head; }
+        public Employee gethead() 
+        {
+            return this.head;
+        }
         public void load_employee()
         {
             Shift shift;
@@ -40,33 +60,32 @@ namespace Emergency_Ammbulance_Service
             Status status;
             int id;
             string name;
+            int rating;
             int CNIC;
             int phone;
             string adress, shft, st, type;
             string password;
             string[] lines = File.ReadAllLines("employee_data.txt");
 
-
             foreach (string line in lines)
             {
                 id = int.Parse(getStr(line, 0));
                 name = getStr(line, 1);
-                CNIC = int.Parse(getStr(line, 2));
-                phone = int.Parse(getStr(line, 3));
-                adress = getStr(line, 4);
-                shft = getStr(line, 5);
-                st = getStr(line, 6);
-                type = getStr(line, 7);
-                password = getStr(line, 8);
+                rating = int.Parse(getStr(line, 2));
+                CNIC = int.Parse(getStr(line, 3));
+                phone = int.Parse(getStr(line, 4));
+                adress = getStr(line, 5);
+                shft = getStr(line, 6);
+                st = getStr(line, 7);
+                type = getStr(line, 8);
+                password = getStr(line, 9);
                 Enum.TryParse(shft, out shift);
                 Enum.TryParse(st, out status);
                 Enum.TryParse(type, out typ);
-                Employee emp = new Employee(id, name, phone, CNIC, adress, shift, Status.Unavailable, typ, password);
+                Employee emp = new Employee(id, name, rating, phone, CNIC, adress, shift, Status.Unavailable, typ, password);
                 add_employee(emp);
 
-                
             }
-            
         }
         private string getStr(string statement, int position)
         {
@@ -89,8 +108,7 @@ namespace Emergency_Ammbulance_Service
             return word;
         }
         public bool varify_EMP(string name, string password) 
-        {
-            
+        {   
             Employee y = this.head;
             while(y != null)
             {
@@ -126,5 +144,4 @@ namespace Emergency_Ammbulance_Service
             return employee;
         }
     }
-        
 }

@@ -6,30 +6,24 @@ using System.Threading.Tasks;
 
 namespace Emergency_Ammbulance_Service
 {
-    class VehichleList
+    class ambulance_list
     {
-        public Vehichle head { get; private set;  }
-        private VehichleList()
+        private static ambulance_list instance = null;
+        public ambulance_vehicle head { get; set; }
+        
+        public static ambulance_list vehichleInstance()
+        {
+            if (instance == null)
+            {
+                instance = new ambulance_list();
+            }
+            return instance;
+        }
+
+        private ambulance_list()
         {
             head = null;
         }
-
-        public Vehichle getVHead()
-        {
-            return this.head;
-        }
-
-        private static VehichleList vList;
-        public static VehichleList vehichleInstance()
-        {
-            if (vList == null)
-            {
-                vList = new VehichleList();
-            }
-            return vList;
-        }
-
-
         public bool isEmpty() // function will return true if list is empty else return false
         {
             if (this.head == null)
@@ -39,7 +33,7 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
-        public void insert(Vehichle n) //insert at the start of list
+        public void insert(ambulance_vehicle n) //insert at the start of list
         {
             n.next = head;
             head = n;
@@ -48,9 +42,10 @@ namespace Emergency_Ammbulance_Service
 
         public bool deleteVehichle(string x)  //delete all occurrences of x
         {
-            Vehichle h = this.head;
+            ambulance_vehicle h = this.head;
             if (h.number == x)
             {
+                head = null;
                 head = head.next;
                 return true;
             }
@@ -65,25 +60,10 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
-
-        public bool verifyVehichle(string num) // Function will return true if user will true otherwise return
-        {                                               // else return false
-            Vehichle h = this.head;
-            while (h != null)
-            {
-                if (h.number == num)
-                {
-                    return true;
-                }
-                h = h.next;
-            }
-            return false;
-        }
-
         public int size()
         {
             int counter = 0;
-            Vehichle h = this.head;
+            ambulance_vehicle h = this.head;
             while (h != null)
             {
                 counter = counter + 1;
@@ -91,8 +71,6 @@ namespace Emergency_Ammbulance_Service
             }
             return counter;
         }
-
-
     }
 }
 

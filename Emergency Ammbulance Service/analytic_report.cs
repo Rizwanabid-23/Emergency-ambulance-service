@@ -27,7 +27,7 @@ namespace Emergency_Ammbulance_Service
         private void ambulance_button_clicked(object sender, EventArgs e)
         {
             this.Hide();
-            ambulance amb = new ambulance();
+            ambulance_form amb = new ambulance_form();
             amb.Show();
         }
 

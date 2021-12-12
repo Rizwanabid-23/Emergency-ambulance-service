@@ -17,8 +17,25 @@ namespace Emergency_Ammbulance_Service
         public admin_main()
         {
             InitializeComponent();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> df42584594975feeb9cbf6a8ec26bfef6494af71
         }
+
+
+        //private static admin_main instance = null;
+
+        //public static admin_main Instance {
+        //    get {
+        //        if (instance == null)
+        //        {
+        //            instance = new admin_main();
+        //        }
+        //        return instance;
+        //    }
+        //}
 
         public void show_Emp()
         {
@@ -28,6 +45,7 @@ namespace Emergency_Ammbulance_Service
             int id, rating, phone;
             Type type;
             Shift shft;
+            dataGridView1.Rows.Clear();
             while (y != null)
             {
                 id = y.id;
@@ -39,8 +57,6 @@ namespace Emergency_Ammbulance_Service
                 dataGridView1.Rows.Add(id, Name, rating, type, shft , phone, y.pin);
                 y = y.next;
             }
-   
-
         }
 
         
@@ -90,7 +106,7 @@ namespace Emergency_Ammbulance_Service
         private void ambulance_clcik(object sender, EventArgs e)
         {
             this.Hide();
-            ambulance amb = new ambulance();
+            ambulance_form amb = new ambulance_form();
             amb.Show();
         }
 
