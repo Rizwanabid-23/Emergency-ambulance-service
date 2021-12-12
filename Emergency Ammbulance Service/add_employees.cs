@@ -14,7 +14,6 @@ namespace Emergency_Ammbulance_Service
     public partial class add_employees : Form
     {
         public static int counter_id=0;
-        
         public add_employees()
         {
             InitializeComponent();
@@ -26,6 +25,7 @@ namespace Emergency_Ammbulance_Service
 
         private void save_employee_info(object sender, EventArgs e)
         {
+            
             int id = int.Parse(ID_textbox.Text);
             string name = name_textbox.Text;
             int rating = 0;
@@ -40,7 +40,7 @@ namespace Emergency_Ammbulance_Service
             Enum.TryParse(employed_as, out typ);
             string password = password_textbox.Text;
 
-            Employee emp = new Employee(id, name, phone, cnic, adress, shift, Status.Unavailable, typ, password);
+            Employee emp = new Employee(id, name, rating, phone, cnic, adress, shift, Status.Unavailable, typ, password);
             CRI cri = CRI.Instance;
             cri.add_employee(emp);
             
@@ -58,15 +58,6 @@ namespace Emergency_Ammbulance_Service
                     }
                 }
             }
-        }
-
-        private void add_employees_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void add_employees_Leave(object sender, EventArgs e)
-        {
         }
     }
 }

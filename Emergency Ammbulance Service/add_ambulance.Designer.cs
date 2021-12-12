@@ -69,9 +69,9 @@ namespace Emergency_Ammbulance_Service
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Emergency_Ammbulance_Service.Properties.Resources.newrescue;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 158);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 115);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(201, 201);
+            this.pictureBox1.Size = new System.Drawing.Size(199, 195);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -80,7 +80,7 @@ namespace Emergency_Ammbulance_Service
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(27)))), ((int)(((byte)(0)))));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 409);
+            this.pictureBox2.Size = new System.Drawing.Size(220, 341);
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
@@ -88,7 +88,7 @@ namespace Emergency_Ammbulance_Service
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(423, 9);
+            this.label3.Location = new System.Drawing.Point(280, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(244, 40);
             this.label3.TabIndex = 36;
@@ -98,7 +98,7 @@ namespace Emergency_Ammbulance_Service
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(380, 106);
+            this.label4.Location = new System.Drawing.Point(283, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 19);
             this.label4.TabIndex = 37;
@@ -106,35 +106,38 @@ namespace Emergency_Ammbulance_Service
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(567, 103);
+            this.textBox1.Location = new System.Drawing.Point(424, 104);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 38;
             // 
             // save_button
             // 
-            this.save_button.Location = new System.Drawing.Point(543, 261);
+            this.save_button.Location = new System.Drawing.Point(437, 195);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(75, 23);
             this.save_button.TabIndex = 39;
             this.save_button.Text = "Save";
             this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.add_ambulance_click);
             // 
             // clear_button
             // 
-            this.clear_button.Location = new System.Drawing.Point(430, 261);
+            this.clear_button.Location = new System.Drawing.Point(328, 195);
             this.clear_button.Name = "clear_button";
             this.clear_button.Size = new System.Drawing.Size(75, 23);
             this.clear_button.TabIndex = 40;
             this.clear_button.Text = "Clear";
             this.clear_button.UseVisualStyleBackColor = true;
+            this.clear_button.Click += new System.EventHandler(this.clear_click);
             // 
             // add_ambulance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(844, 408);
+            this.ClientSize = new System.Drawing.Size(605, 334);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.clear_button);
             this.Controls.Add(this.save_button);
             this.Controls.Add(this.textBox1);
@@ -142,7 +145,6 @@ namespace Emergency_Ammbulance_Service
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "add_ambulance";
             this.Text = "add_ambulance";

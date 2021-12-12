@@ -308,8 +308,6 @@ namespace Emergency_Ammbulance_Service
             this.Controls.Add(this.pictureBox2);
             this.Name = "add_employees";
             this.Text = "add_employee";
-            this.Load += new System.EventHandler(this.add_employees_Load);
-            this.Leave += new System.EventHandler(this.add_employees_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

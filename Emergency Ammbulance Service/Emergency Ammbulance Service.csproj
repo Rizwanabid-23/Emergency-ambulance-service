@@ -64,11 +64,11 @@
     <Compile Include="admin_main.Designer.cs">
       <DependentUpon>admin_main.cs</DependentUpon>
     </Compile>
-    <Compile Include="ambulance.cs">
+    <Compile Include="ambulance_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ambulance.Designer.cs">
-      <DependentUpon>ambulance.cs</DependentUpon>
+    <Compile Include="ambulance_form.Designer.cs">
+      <DependentUpon>ambulance_form.cs</DependentUpon>
     </Compile>
     <Compile Include="analytic_report.cs">
       <SubType>Form</SubType>
@@ -135,8 +135,8 @@
     </Compile>
     <Compile Include="Stack.cs" />
     <Compile Include="Status.cs" />
-    <Compile Include="Vehichle.cs" />
-    <Compile Include="VehichleList.cs" />
+    <Compile Include="ambulance_vehicle.cs" />
+    <Compile Include="ambulance_list.cs" />
     <EmbeddedResource Include="add_ambulance.resx">
       <DependentUpon>add_ambulance.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="admin_main.resx">
       <DependentUpon>admin_main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ambulance.resx">
-      <DependentUpon>ambulance.cs</DependentUpon>
+    <EmbeddedResource Include="ambulance_form.resx">
+      <DependentUpon>ambulance_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="analytic_report.resx">
       <DependentUpon>analytic_report.cs</DependentUpon>
