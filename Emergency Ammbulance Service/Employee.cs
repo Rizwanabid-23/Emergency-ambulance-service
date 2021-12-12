@@ -8,6 +8,7 @@ namespace Emergency_Ammbulance_Service
 {
     public class Employee : Person
     {
+       
         public Employee next { get; set; }
         public int id { get; private set; }
         public int rating { get; private set; }
@@ -15,6 +16,8 @@ namespace Emergency_Ammbulance_Service
         public Shift shift { get; private set; }
         public string pin { get; private set; }
         public Type type { get; private set; }
+        
+
 
         public Employee(int id, string name, int rating, int phone, int cnic, string address, Shift shift, Status status, Type typ, string pin) : base(name, phone, cnic, address)
         {
