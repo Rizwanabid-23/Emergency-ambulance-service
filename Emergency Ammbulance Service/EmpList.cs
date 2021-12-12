@@ -8,7 +8,20 @@ namespace Emergency_Ammbulance_Service
 {
     class EmpList
     {
+        private static EmpList instance = null;
         public Employee head { get; private set; }
+
+        
+        public static EmpList Instance {
+            get {
+                if (instance == null)
+                {
+                    instance = new EmpList();
+                }
+                return instance;
+            }
+        }
+        
 
         // public varibles and methods of link list are here
         private EmpList() // Constructor of link list

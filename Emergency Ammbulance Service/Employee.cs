@@ -11,6 +11,7 @@ namespace Emergency_Ammbulance_Service
        
         public Employee next { get; set; }
         public int id { get; private set; }
+        public int rating { get; private set; }
         public Status status { get; private set; }
         public Shift shift { get; private set; }
         public string pin { get; private set; }
@@ -18,10 +19,11 @@ namespace Emergency_Ammbulance_Service
         
 
 
-        public Employee(int id, string name, int phone, int cnic, string address, Shift shift, Status status, Type typ, string pin) : base(name, phone, cnic, address)
+        public Employee(int id, string name, int rating, int phone, int cnic, string address, Shift shift, Status status, Type typ, string pin) : base(name, phone, cnic, address)
         {
            
             this.id = id;
+            this.rating = rating;
             this.status = status;
             this.shift = shift;
             this.pin = pin;

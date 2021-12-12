@@ -80,7 +80,7 @@ namespace Emergency_Ammbulance_Service
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(27)))), ((int)(((byte)(0)))));
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(224, 409);
             this.pictureBox2.TabIndex = 7;

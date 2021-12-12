@@ -148,6 +148,7 @@ namespace Emergency_Ammbulance_Service
             this.Controls.Add(this.pictureBox2);
             this.Name = "loginForm";
             this.Text = "Emergency Ambulance Service";
+            this.Load += new System.EventHandler(this.loginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
