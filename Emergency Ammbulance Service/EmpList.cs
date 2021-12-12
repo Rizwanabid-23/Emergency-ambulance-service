@@ -129,7 +129,7 @@ namespace Emergency_Ammbulance_Service
                         {
                             temp = h;
                             this.delete(h);
-                            Employee e = new Employee(temp.id, temp.name, temp.phone, temp.CNIC, temp.address, temp.shift, temp.status, temp.type, temp.pin);
+                            Employee e = new Employee(temp.id, temp.name,0, temp.phone, temp.CNIC, temp.address, temp.shift, temp.status, temp.type, temp.pin);
                             this.insert(e);
                         }
                         h = h.next;

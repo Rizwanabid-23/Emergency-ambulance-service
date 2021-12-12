@@ -23,4 +23,14 @@ namespace Emergency_Ammbulance_Service
         Driver,
         EMT
     }
+    public enum Attributes
+    {
+        id,
+        rating,
+        status,
+        shift,
+        pin,
+        type
+            
+    }
 }

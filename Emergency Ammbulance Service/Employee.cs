@@ -27,5 +27,43 @@ namespace Emergency_Ammbulance_Service
             this.type = typ;
             this.next = null;
         }
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+        public void setRating(int rating)
+        {
+            this.rating=rating;
+        }
+        public void setShift(Shift shift)
+        {
+            this.shift = shift;
+        }
+        public void setCNIC(int cnic)
+        {
+            this.CNIC = cnic;
+        }
+        public void setPhone(int phone)
+        {
+            this.phone = phone;
+        }
+        public void setAddress(string address)
+        {
+            this.address = address;
+        }
+        public void setStatus(Status status)
+        {
+            this.status=status;
+        }
+        public void setPin(string pin)
+        {
+            this.pin = pin;
+        }
+        public void setType(Type type)
+        {
+            this.type=type;
+        }
+
+
     }
 }

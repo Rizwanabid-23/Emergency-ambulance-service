@@ -17,10 +17,8 @@ namespace Emergency_Ammbulance_Service
         private CRI()
         {
         }
-        public static CRI Instance
-        {
-            get
-            {
+        public static CRI Instance {
+            get {
                 if (instance == null)
                 {
                     instance = new CRI();
@@ -44,12 +42,12 @@ namespace Emergency_Ammbulance_Service
             return this.Ahead;
         }
 
-        public void add_employee(Employee n) 
+        public void add_employee(Employee n)
         {
             lst.insert(n);
             this.head = lst.head;
         }
-        public Employee gethead() 
+        public Employee gethead()
         {
             return this.head;
         }
@@ -107,14 +105,14 @@ namespace Emergency_Ammbulance_Service
             }
             return word;
         }
-        public bool varify_EMP(string name, string password) 
-        {   
+        public bool varify_EMP(string name, string password)
+        {
             Employee y = this.head;
-            while(y != null)
+            while (y != null)
             {
                 if (y.name == name && y.pin == password)
                 {
-                    return true;    
+                    return true;
                 }
                 y = y.next;
             }
@@ -122,26 +120,87 @@ namespace Emergency_Ammbulance_Service
         }
         public Employee searchEmployee(string attrib, String keyword)
         {
-           
+
             Employee employee = this.head;
             while (employee != null)
             {
-                if ((attrib == "Name") && (keyword == employee.name)) 
+                if ((attrib == "Name") && (keyword == employee.name))
                 {
                     return employee;
                 }
                 else if ((attrib == "Shift") && (keyword == employee.shift.ToString()))
                 {
-                     return employee;
+                    return employee;
                 }
                 else if ((attrib == "Catagory") && (keyword == employee.type.ToString()))
                 {
                     return employee;
                 }
+                else if ((attrib == "Phone") && (keyword == employee.phone.ToString()))
+                {
+                    return employee;
+                }
                 
+
                 employee = employee.next;
             }
             return employee;
+        }
+        public bool delete(Employee x)  // Here function overloading is used to overload delete person
+        {                               // This will delete the employ which we want to search
+            Employee current = this.head;
+            Employee next = current.next;
+            if (current == x)
+            {
+                this.head = this.head.next;
+                return true;
+            }
+            while (next != null)
+            {
+                if (current == x)
+                {
+                    current = next;
+                    return true;
+                }
+                current = next;
+                next = next.next;   
+                
+            }
+            return false;
+
+        }
+        public bool update(string key, string attrib,string changeTo)
+        {
+            Employee emp = searchEmployee(attrib, key);
+            if(emp != null)
+            {
+                if (attrib == "Name")
+                {
+                    emp.setName(changeTo);
+                    return true;    
+                }
+                else if (attrib == "Shift")
+                {
+                   emp.setShift((Shift)Enum.Parse(typeof(Shift), key));
+                }
+                else if (attrib == "Catagory") 
+                {
+                    emp.setType((Type)Enum.Parse(typeof(Type), key));
+                    return true;
+                }
+                else if (attrib == "Phone") 
+                {
+                    emp.setPhone(int.Parse(key));
+                    return true;
+                }
+                else if (attrib == "Pin")
+                {
+                    emp.setPin(key);
+                    return true;
+                }
+
+            }
+            return false;
         }
     }
 }

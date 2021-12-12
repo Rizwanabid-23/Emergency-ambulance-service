@@ -104,6 +104,7 @@
     <Compile Include="failed.Designer.cs">
       <DependentUpon>failed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Graph.cs" />
     <Compile Include="login_form.cs">
       <SubType>Form</SubType>
     </Compile>

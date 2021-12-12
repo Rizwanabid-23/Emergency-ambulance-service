@@ -8,10 +8,10 @@ namespace Emergency_Ammbulance_Service
 {
     public class Person
     {
-        public string name { get; private set; }
-        public int phone { get; private set; }
-        public int CNIC { get; private set; }
-        public string address { get; private set; }
+        public string name { get; internal set; }
+        public int phone { get; internal set; }
+        public int CNIC { get; internal set; }
+        public string address { get; internal set; }
         public Person(string name, int phone, int CNIC, string address)
         {
             this.name = name;
