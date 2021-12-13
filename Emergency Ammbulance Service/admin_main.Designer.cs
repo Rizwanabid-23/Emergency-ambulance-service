@@ -36,7 +36,6 @@ namespace Emergency_Ammbulance_Service
             this.total_employees_label = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.searchBy = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.searchKey = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -58,8 +57,7 @@ namespace Emergency_Ammbulance_Service
             this.shiftColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            
-            
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -122,10 +120,11 @@ namespace Emergency_Ammbulance_Service
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "ID",
             "Name",
-            "Rating"});
-            this.comboBox1.Location = new System.Drawing.Point(480, 120);
+            "Shift",
+            "Rating",
+            "Type"});
+            this.comboBox1.Location = new System.Drawing.Point(487, 162);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 20;
@@ -143,18 +142,6 @@ namespace Emergency_Ammbulance_Service
             this.searchBy.Name = "searchBy";
             this.searchBy.Size = new System.Drawing.Size(121, 21);
             this.searchBy.TabIndex = 21;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Acending",
-            "Descending"});
-            this.comboBox3.Location = new System.Drawing.Point(480, 162);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 22;
             // 
             // searchKey
             // 
@@ -195,6 +182,7 @@ namespace Emergency_Ammbulance_Service
             this.button3.TabIndex = 26;
             this.button3.Text = "Filter";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // searchBtn
             // 
@@ -302,18 +290,18 @@ namespace Emergency_Ammbulance_Service
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(27)))), ((int)(((byte)(0)))));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 506);
+            this.pictureBox2.Size = new System.Drawing.Size(224, 428);
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
             // view
             // 
             this.view.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.view.Location = new System.Drawing.Point(796, 230);
+            this.view.Location = new System.Drawing.Point(667, 220);
             this.view.Name = "view";
-            this.view.Size = new System.Drawing.Size(42, 23);
+            this.view.Size = new System.Drawing.Size(71, 23);
             this.view.TabIndex = 35;
-            this.view.Text = "view";
+            this.view.Text = "Refresh";
             this.view.UseVisualStyleBackColor = true;
             this.view.Click += new System.EventHandler(this.view_Click);
             // 
@@ -359,32 +347,21 @@ namespace Emergency_Ammbulance_Service
             this.Password.Name = "Password";
             this.Password.ReadOnly = true;
             // 
-            // pictureBox2
+            // textBox1
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(27)))), ((int)(((byte)(0)))));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 428);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // view
-            // 
-            this.view.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.view.Location = new System.Drawing.Point(667, 220);
-            this.view.Name = "view";
-            this.view.Size = new System.Drawing.Size(71, 23);
-            this.view.TabIndex = 35;
-            this.view.Text = "Refresh";
-            this.view.UseVisualStyleBackColor = true;
-            this.view.Click += new System.EventHandler(this.view_Click);
+            this.textBox1.Location = new System.Drawing.Point(487, 120);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
+            this.textBox1.TabIndex = 36;
+            this.textBox1.Text = "Search term";
             // 
             // admin_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(884, 496);
+            this.ClientSize = new System.Drawing.Size(931, 496);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.view);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button10);
@@ -398,7 +375,6 @@ namespace Emergency_Ammbulance_Service
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.searchKey);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.searchBy);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.total_employees_label);
@@ -426,7 +402,6 @@ namespace Emergency_Ammbulance_Service
         private System.Windows.Forms.Label total_employees_label;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox searchBy;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox searchKey;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -447,5 +422,6 @@ namespace Emergency_Ammbulance_Service
         private System.Windows.Forms.DataGridViewTextBoxColumn shiftColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
