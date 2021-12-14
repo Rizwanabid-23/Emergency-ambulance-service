@@ -82,8 +82,20 @@
     <Compile Include="callLogs.Designer.cs">
       <DependentUpon>callLogs.cs</DependentUpon>
     </Compile>
+    <Compile Include="call_center.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="call_center.Designer.cs">
+      <DependentUpon>call_center.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRI.cs" />
     <Compile Include="CTWO.cs" />
+    <Compile Include="current_status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="current_status.Designer.cs">
+      <DependentUpon>current_status.cs</DependentUpon>
+    </Compile>
     <Compile Include="dispatch_ambulance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,11 +124,23 @@
       <DependentUpon>login_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Node.cs" />
+    <Compile Include="parking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parking.Designer.cs">
+      <DependentUpon>parking.cs</DependentUpon>
+    </Compile>
     <Compile Include="path.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="path.Designer.cs">
       <DependentUpon>path.cs</DependentUpon>
+    </Compile>
+    <Compile Include="patient_info_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patient_info_form.Designer.cs">
+      <DependentUpon>patient_info_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
@@ -156,6 +180,12 @@
     <EmbeddedResource Include="callLogs.resx">
       <DependentUpon>callLogs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="call_center.resx">
+      <DependentUpon>call_center.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="current_status.resx">
+      <DependentUpon>current_status.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dispatch_ambulance.resx">
       <DependentUpon>dispatch_ambulance.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,8 +198,14 @@
     <EmbeddedResource Include="login_form.resx">
       <DependentUpon>login_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="parking.resx">
+      <DependentUpon>parking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="path.resx">
       <DependentUpon>path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patient_info_form.resx">
+      <DependentUpon>patient_info_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

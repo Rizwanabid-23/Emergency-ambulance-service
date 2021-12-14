@@ -31,7 +31,6 @@ namespace Emergency_Ammbulance_Service
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,6 +49,7 @@ namespace Emergency_Ammbulance_Service
             this.phone_label = new System.Windows.Forms.Label();
             this.shift_label = new System.Windows.Forms.Label();
             this.postion_label = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,15 +77,6 @@ namespace Emergency_Ammbulance_Service
             this.label1.TabIndex = 4;
             this.label1.Text = "Emergency";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(27)))), ((int)(((byte)(0)))));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 409);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
             // button5
             // 
             this.button5.AutoSize = true;
@@ -96,6 +87,7 @@ namespace Emergency_Ammbulance_Service
             this.button5.TabIndex = 29;
             this.button5.Text = "Current status";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.current_status_click);
             // 
             // button1
             // 
@@ -107,6 +99,7 @@ namespace Emergency_Ammbulance_Service
             this.button1.TabIndex = 30;
             this.button1.Text = "Call Center";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.call_center_click);
             // 
             // button2
             // 
@@ -118,6 +111,7 @@ namespace Emergency_Ammbulance_Service
             this.button2.TabIndex = 31;
             this.button2.Text = "Profile";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.profile_click);
             // 
             // button3
             // 
@@ -127,8 +121,9 @@ namespace Emergency_Ammbulance_Service
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 23);
             this.button3.TabIndex = 32;
-            this.button3.Text = "Performance Report";
+            this.button3.Text = "Parking";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.parking_click);
             // 
             // button4
             // 
@@ -271,6 +266,15 @@ namespace Emergency_Ammbulance_Service
             this.postion_label.Size = new System.Drawing.Size(25, 19);
             this.postion_label.TabIndex = 46;
             this.postion_label.Text = "ID";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(27)))), ((int)(((byte)(0)))));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(224, 409);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // employee_main
             // 

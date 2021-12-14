@@ -70,6 +70,7 @@ namespace Emergency_Ammbulance_Service
             this.button10.TabIndex = 54;
             this.button10.Text = "Log Out";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.log_out);
             // 
             // button9
             // 
@@ -81,6 +82,7 @@ namespace Emergency_Ammbulance_Service
             this.button9.TabIndex = 53;
             this.button9.Text = "Call logs";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.call_logs);
             // 
             // button8
             // 
@@ -92,6 +94,7 @@ namespace Emergency_Ammbulance_Service
             this.button8.TabIndex = 52;
             this.button8.Text = "Shifts";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.shift_click);
             // 
             // button7
             // 
@@ -103,6 +106,7 @@ namespace Emergency_Ammbulance_Service
             this.button7.TabIndex = 51;
             this.button7.Text = "CTWO reports";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.ctwo_click);
             // 
             // button6
             // 
@@ -114,6 +118,7 @@ namespace Emergency_Ammbulance_Service
             this.button6.TabIndex = 50;
             this.button6.Text = "Ambulance";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.ambulance_click);
             // 
             // button5
             // 
@@ -125,6 +130,7 @@ namespace Emergency_Ammbulance_Service
             this.button5.TabIndex = 49;
             this.button5.Text = "Employee";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.employee_click);
             // 
             // total_employees_label
             // 
@@ -132,7 +138,7 @@ namespace Emergency_Ammbulance_Service
             this.total_employees_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_employees_label.Location = new System.Drawing.Point(665, 78);
             this.total_employees_label.Name = "total_employees_label";
-            this.total_employees_label.Size = new System.Drawing.Size(21, 16);
+            this.total_employees_label.Size = new System.Drawing.Size(22, 16);
             this.total_employees_label.TabIndex = 40;
             this.total_employees_label.Text = "00";
             // 
@@ -225,7 +231,7 @@ namespace Emergency_Ammbulance_Service
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(665, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 16);
+            this.label7.Size = new System.Drawing.Size(22, 16);
             this.label7.TabIndex = 57;
             this.label7.Text = "00";
             // 
@@ -235,7 +241,7 @@ namespace Emergency_Ammbulance_Service
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(665, 137);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 16);
+            this.label8.Size = new System.Drawing.Size(22, 16);
             this.label8.TabIndex = 58;
             this.label8.Text = "00";
             // 
@@ -255,7 +261,7 @@ namespace Emergency_Ammbulance_Service
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(665, 167);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 16);
+            this.label10.Size = new System.Drawing.Size(22, 16);
             this.label10.TabIndex = 60;
             this.label10.Text = "00";
             // 
