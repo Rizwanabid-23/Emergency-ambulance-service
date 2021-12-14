@@ -76,6 +76,7 @@
     <Compile Include="analytic_report.Designer.cs">
       <DependentUpon>analytic_report.cs</DependentUpon>
     </Compile>
+    <Compile Include="Call.cs" />
     <Compile Include="callLogs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +119,7 @@
     <Compile Include="path.Designer.cs">
       <DependentUpon>path.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -140,6 +142,12 @@
     <Compile Include="Status.cs" />
     <Compile Include="ambulance_vehicle.cs" />
     <Compile Include="ambulance_list.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="add_ambulance.resx">
       <DependentUpon>add_ambulance.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="shifts.resx">
       <DependentUpon>shifts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

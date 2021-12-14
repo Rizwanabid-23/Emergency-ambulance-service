@@ -44,7 +44,7 @@ namespace Emergency_Ammbulance_Service
             header.right = nullNode;
         }
 
-        public virtual void insert(int item)
+        public virtual void insert(long item)
         {
             current = parent = grand = header;
             nullNode.element = item;
@@ -65,7 +65,7 @@ namespace Emergency_Ammbulance_Service
             {
                 return;
             }
-            current = new RedBlackNode(item, nullNode, nullNode);
+            current = new RedBlackNode(item, null, nullNode, nullNode) ;
 
             if (item < parent.element)
             {
@@ -77,7 +77,7 @@ namespace Emergency_Ammbulance_Service
             }
             handleReorient(item);
         }
-        private void handleReorient(int item)
+        private void handleReorient(long item)
         {
 
             current.color = RED;
@@ -100,7 +100,7 @@ namespace Emergency_Ammbulance_Service
 
             header.right.color = BLACK;
         }
-        private RedBlackNode rotate(int item, RedBlackNode parent)
+        private RedBlackNode rotate(long item, RedBlackNode parent)
         {
             if (item < parent.element)
             {
@@ -156,7 +156,7 @@ namespace Emergency_Ammbulance_Service
             bool found = false;
             while ((r != nullNode) && !found)
             {
-                int rval = r.element;
+                long rval = r.element;
                 if (val < rval)
                 {
                     r = r.left;

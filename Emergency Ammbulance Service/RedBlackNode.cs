@@ -9,17 +9,20 @@ namespace Emergency_Ammbulance_Service
     internal class RedBlackNode
     {
         internal RedBlackNode left, right;
-        internal int element;
+        Patient patient;
+        internal long element;
+
         internal int color;
 
-        public RedBlackNode(int theElement) : this(theElement, null, null)
+        public RedBlackNode(long element) : this(element, null, null, null)
         {
         }
-        public RedBlackNode(int theElement, RedBlackNode lt, RedBlackNode rt)
+        public RedBlackNode(long element,Patient patient, RedBlackNode lt, RedBlackNode rt)
         {
             left = lt;
             right = rt;
-            element = theElement;
+            this.patient = patient;
+            element = patient.EC;
             color = 1;
         }
     }
