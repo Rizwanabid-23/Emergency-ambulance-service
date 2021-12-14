@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Emergency_Ammbulance_Service
 {
-    public partial class employee_main : Form
+    public partial class parking : Form
     {
-        public employee_main()
+        public parking()
         {
             InitializeComponent();
-        }
-
-        private void log_out(object sender, EventArgs e)
-        {
-            this.Hide();
-            loginForm login = new loginForm();
-            login.Show();
         }
 
         private void profile_click(object sender, EventArgs e)
@@ -36,6 +29,7 @@ namespace Emergency_Ammbulance_Service
             this.Hide();
             call_center call_Center = new call_center();
             call_Center.Show();
+
         }
 
         private void current_status_click(object sender, EventArgs e)
@@ -43,7 +37,6 @@ namespace Emergency_Ammbulance_Service
             this.Hide();
             current_status status = new current_status();
             status.Show();
-
         }
 
         private void parking_click(object sender, EventArgs e)
@@ -51,6 +44,14 @@ namespace Emergency_Ammbulance_Service
             this.Hide();
             parking park = new parking();
             park.Show();
+        }
+
+        private void log_out(object sender, EventArgs e)
+        {
+            this.Hide();
+            loginForm form = new loginForm();
+            form.Show();
+
         }
     }
 }

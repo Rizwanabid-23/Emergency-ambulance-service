@@ -44,6 +44,15 @@ namespace Emergency_Ammbulance_Service
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.plate_num_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.selection_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_driver_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_driver_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.selection_driver_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_helper_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_helper_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.selection_helper_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -147,27 +156,43 @@ namespace Emergency_Ammbulance_Service
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(372, 91);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.plate_num_column,
+            this.status_column,
+            this.selection_column});
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.Location = new System.Drawing.Point(359, 91);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(302, 69);
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView1.Size = new System.Drawing.Size(327, 69);
             this.dataGridView1.TabIndex = 74;
             // 
             // dataGridView2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(372, 196);
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_driver_column,
+            this.status_driver_column,
+            this.selection_driver_column});
+            this.dataGridView2.Location = new System.Drawing.Point(359, 196);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(302, 67);
+            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView2.Size = new System.Drawing.Size(327, 67);
             this.dataGridView2.TabIndex = 75;
             // 
             // dataGridView3
             // 
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(372, 301);
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_helper_column,
+            this.status_helper_column,
+            this.selection_helper_column});
+            this.dataGridView3.Location = new System.Drawing.Point(359, 301);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(302, 67);
+            this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridView3.Size = new System.Drawing.Size(327, 67);
             this.dataGridView3.TabIndex = 76;
             // 
             // label7
@@ -198,6 +223,60 @@ namespace Emergency_Ammbulance_Service
             this.button1.TabIndex = 79;
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // plate_num_column
+            // 
+            this.plate_num_column.HeaderText = "Plate number";
+            this.plate_num_column.Name = "plate_num_column";
+            this.plate_num_column.ReadOnly = true;
+            // 
+            // status_column
+            // 
+            this.status_column.HeaderText = "Status";
+            this.status_column.Name = "status_column";
+            this.status_column.ReadOnly = true;
+            // 
+            // selection_column
+            // 
+            this.selection_column.HeaderText = "Selection";
+            this.selection_column.Name = "selection_column";
+            this.selection_column.ReadOnly = true;
+            // 
+            // id_driver_column
+            // 
+            this.id_driver_column.HeaderText = "ID";
+            this.id_driver_column.Name = "id_driver_column";
+            this.id_driver_column.ReadOnly = true;
+            // 
+            // status_driver_column
+            // 
+            this.status_driver_column.HeaderText = "Status";
+            this.status_driver_column.Name = "status_driver_column";
+            this.status_driver_column.ReadOnly = true;
+            // 
+            // selection_driver_column
+            // 
+            this.selection_driver_column.HeaderText = "Selection";
+            this.selection_driver_column.Name = "selection_driver_column";
+            this.selection_driver_column.ReadOnly = true;
+            // 
+            // id_helper_column
+            // 
+            this.id_helper_column.HeaderText = "ID";
+            this.id_helper_column.Name = "id_helper_column";
+            this.id_helper_column.ReadOnly = true;
+            // 
+            // status_helper_column
+            // 
+            this.status_helper_column.HeaderText = "Status";
+            this.status_helper_column.Name = "status_helper_column";
+            this.status_helper_column.ReadOnly = true;
+            // 
+            // selection_helper_column
+            // 
+            this.selection_helper_column.HeaderText = "Selection";
+            this.selection_helper_column.Name = "selection_helper_column";
+            this.selection_helper_column.ReadOnly = true;
             // 
             // dispatch_ambulance
             // 
@@ -248,5 +327,14 @@ namespace Emergency_Ammbulance_Service
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn plate_num_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn selection_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_driver_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status_driver_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn selection_driver_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_helper_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status_helper_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn selection_helper_column;
     }
 }

@@ -20,6 +20,8 @@ namespace Emergency_Ammbulance_Service
             return instance;
         }
 
+        ambulance_Queue amb_Queue_obj = ambulance_Queue.vehichleQueueInstance();
+
         private ambulance_list()
         {
             head = null;
@@ -37,6 +39,7 @@ namespace Emergency_Ammbulance_Service
         {
             n.next = head;
             head = n;
+            amb_Queue_obj.addAmbulance(n.number);
 
         }
 
@@ -60,17 +63,46 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
-        public int size()
+
+        public ambulance_vehicle searchVehichle(string number)
         {
-            int counter = 0;
-            ambulance_vehicle h = this.head;
-            while (h != null)
+
+            ambulance_vehicle veh = this.head;
+            while (veh != null)
             {
-                counter = counter + 1;
-                h = h.next;
+                if (veh.number == number)
+                {
+                    return veh;
+                }
+                veh = veh.next;
             }
-            return counter;
+            return veh;
         }
+
+        public bool updateStatusToUnAvailable(string num)
+        {
+            ambulance_vehicle vehichle = searchVehichle(num);
+            if (vehichle != null)
+            {
+                string a = "Not Available";
+                vehichle.status = (Status)Enum.Parse(typeof(Status) , a);
+            }
+            return false;
+        }
+
+        public bool updateStatusToAvailable(string num)
+        {
+            ambulance_vehicle vehichle = searchVehichle(num);
+            if (vehichle != null)
+            {
+                string a = "Available";
+                vehichle.status = (Status)Enum.Parse(typeof(Status), a);
+            }
+            return false;
+        }
+
+
+
     }
 }
 
