@@ -48,8 +48,6 @@ namespace Emergency_Ammbulance_Service
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.view = new System.Windows.Forms.Button();
             this.IDcolumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ratingColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +55,8 @@ namespace Emergency_Ammbulance_Service
             this.shiftColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.view = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -199,9 +199,9 @@ namespace Emergency_Ammbulance_Service
             // 
             this.button5.AutoSize = true;
             this.button5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(59, 93);
+            this.button5.Location = new System.Drawing.Point(59, 115);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(108, 38);
+            this.button5.Size = new System.Drawing.Size(108, 28);
             this.button5.TabIndex = 28;
             this.button5.Text = "Employee";
             this.button5.UseVisualStyleBackColor = false;
@@ -211,9 +211,9 @@ namespace Emergency_Ammbulance_Service
             // 
             this.button6.AutoSize = true;
             this.button6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(59, 151);
+            this.button6.Location = new System.Drawing.Point(59, 162);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(108, 37);
+            this.button6.Size = new System.Drawing.Size(108, 26);
             this.button6.TabIndex = 29;
             this.button6.Text = "Ambulance";
             this.button6.UseVisualStyleBackColor = false;
@@ -223,9 +223,9 @@ namespace Emergency_Ammbulance_Service
             // 
             this.button7.AutoSize = true;
             this.button7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(59, 204);
+            this.button7.Location = new System.Drawing.Point(59, 205);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(108, 41);
+            this.button7.Size = new System.Drawing.Size(108, 28);
             this.button7.TabIndex = 30;
             this.button7.Text = "CTWO reports";
             this.button7.UseVisualStyleBackColor = false;
@@ -235,9 +235,9 @@ namespace Emergency_Ammbulance_Service
             // 
             this.button8.AutoSize = true;
             this.button8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(59, 259);
+            this.button8.Location = new System.Drawing.Point(59, 249);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(108, 37);
+            this.button8.Size = new System.Drawing.Size(108, 28);
             this.button8.TabIndex = 31;
             this.button8.Text = "Shifts";
             this.button8.UseVisualStyleBackColor = false;
@@ -247,9 +247,9 @@ namespace Emergency_Ammbulance_Service
             // 
             this.button9.AutoSize = true;
             this.button9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Location = new System.Drawing.Point(59, 315);
+            this.button9.Location = new System.Drawing.Point(59, 293);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(108, 34);
+            this.button9.Size = new System.Drawing.Size(108, 27);
             this.button9.TabIndex = 32;
             this.button9.Text = "Call logs";
             this.button9.UseVisualStyleBackColor = false;
@@ -258,7 +258,7 @@ namespace Emergency_Ammbulance_Service
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.FloralWhite;
-            this.button10.Location = new System.Drawing.Point(55, 446);
+            this.button10.Location = new System.Drawing.Point(59, 382);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(112, 27);
             this.button10.TabIndex = 33;
@@ -281,29 +281,9 @@ namespace Emergency_Ammbulance_Service
             this.dataGridView1.Location = new System.Drawing.Point(253, 249);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(652, 236);
+            this.dataGridView1.Size = new System.Drawing.Size(652, 160);
             this.dataGridView1.TabIndex = 34;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(27)))), ((int)(((byte)(0)))));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 428);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // view
-            // 
-            this.view.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.view.Location = new System.Drawing.Point(667, 220);
-            this.view.Name = "view";
-            this.view.Size = new System.Drawing.Size(71, 23);
-            this.view.TabIndex = 35;
-            this.view.Text = "Refresh";
-            this.view.UseVisualStyleBackColor = true;
-            this.view.Click += new System.EventHandler(this.view_Click);
             // 
             // IDcolumn
             // 
@@ -347,6 +327,26 @@ namespace Emergency_Ammbulance_Service
             this.Password.Name = "Password";
             this.Password.ReadOnly = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(27)))), ((int)(((byte)(0)))));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(224, 428);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // view
+            // 
+            this.view.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view.Location = new System.Drawing.Point(667, 220);
+            this.view.Name = "view";
+            this.view.Size = new System.Drawing.Size(71, 23);
+            this.view.TabIndex = 35;
+            this.view.Text = "Refresh";
+            this.view.UseVisualStyleBackColor = true;
+            this.view.Click += new System.EventHandler(this.view_Click);
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(487, 120);
@@ -360,7 +360,7 @@ namespace Emergency_Ammbulance_Service
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(931, 496);
+            this.ClientSize = new System.Drawing.Size(917, 428);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.view);
             this.Controls.Add(this.dataGridView1);
