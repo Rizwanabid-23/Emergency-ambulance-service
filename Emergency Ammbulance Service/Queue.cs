@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Emergency_Ammbulance_Service
 {
-    class Queue
+    public class Queue
     {
         public Node head;
         public Node tail;

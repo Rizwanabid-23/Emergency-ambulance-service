@@ -129,7 +129,7 @@ namespace Emergency_Ammbulance_Service
             {               
                 dataGridView1.Rows.Add(lst.id, lst.name, 0, lst.type, lst.shift, lst.phone, lst.pin);
             }
-            catch (NullReferenceException m)
+            catch (Exception m)
             {
                 MessageBox.Show("Found Nothing");
             }
@@ -147,6 +147,12 @@ namespace Emergency_Ammbulance_Service
                     cri.searchEmployee(,);
             }*/
             // row.Cells["Name"].Value.ToString()
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //dataGridView1.Sort(data);
+            int idx = comboBox1.SelectedIndex;
         }
     }
 }

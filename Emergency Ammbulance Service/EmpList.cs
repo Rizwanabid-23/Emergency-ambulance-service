@@ -100,7 +100,6 @@ namespace Emergency_Ammbulance_Service
             return false;
         }
 
-
         public bool verifyEmply(int cnic, string name) // Function will return true if user will true otherwise return
         {                                               // else return false
             Employee h = this.head;
@@ -115,45 +114,68 @@ namespace Emergency_Ammbulance_Service
             return false;
         }
 
-        public bool searchEmp(int searchby , string toSearch) //search for data value toSearch in the list
+        public void filterEmp(int searchby , string toSearch) //search for data value toSearch in the list
         {
             Employee h = this.head;
             Employee temp;
             if (searchby == 0) // This condition is for name
             {
-                if (searchby == 0)
+                while (h != null)
                 {
-                    while (h != null)
+                    if (h.name == toSearch)
                     {
-                        if (h.name == toSearch)
-                        {
-                            temp = h;
-                            this.delete(h);
-                            Employee e = new Employee(temp.id, temp.name,0, temp.phone, temp.CNIC, temp.address, temp.shift, temp.status, temp.type, temp.pin);
-                            this.insert(e);
-                        }
-                        h = h.next;
+                        temp = h;
+                        this.delete(h);
+                        Employee e = new Employee(temp.id, temp.name,0, temp.phone, temp.CNIC, temp.address, temp.shift, temp.status, temp.type, temp.pin);
+                        this.insert(e);
                     }
+                    h = h.next;
+                } 
+            }
+            else if (searchby == 1)  // This condition is for shift
+            {
+                while (h != null)
+                {
+                    if (h.shift == (Shift)Enum.Parse(typeof(Shift), toSearch))
+                    {
+                        temp = h;
+                        this.delete(h);
+                        Employee e = new Employee(temp.id, temp.name, 0, temp.phone, temp.CNIC, temp.address, temp.shift, temp.status, temp.type, temp.pin);
+                        this.insert(e);
+                    }
+                    h = h.next;
                 }
             }
-            else if (searchby == 1)  // This condition is for ratings
+            else if (searchby == 2)  // This is for rating
             {
+                while (h != null)
+                {
+                    string rat = h.rating.ToString();
+                    if (rat == toSearch)
+                    {
+                        temp = h;
+                        this.delete(h);
+                        Employee e = new Employee(temp.id, temp.name, 0, temp.phone, temp.CNIC, temp.address, temp.shift, temp.status, temp.type, temp.pin);
+                        this.insert(e);
+                    }
+                    h = h.next;
+                }
 
-            }
-            else if (searchby == 2)
-            {
-                // Category
             }
             else if (searchby == 3)
             {
-                // shift
+                while (h != null)
+                {
+                    if (h.type == (Type)Enum.Parse(typeof(Type), toSearch))
+                    {
+                        temp = h;
+                        this.delete(h);
+                        Employee e = new Employee(temp.id, temp.name, 0, temp.phone, temp.CNIC, temp.address, temp.shift, temp.status, temp.type, temp.pin);
+                        this.insert(e);
+                    }
+                    h = h.next;
+                }
             }
-            else if (searchby == 4)
-            {
-                // Phone
-            }
-
-            return false;
 
         }
 
