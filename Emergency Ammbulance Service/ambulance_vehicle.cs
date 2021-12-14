@@ -13,6 +13,11 @@ namespace Emergency_Ammbulance_Service
         public Status status;
         public string dispachTime;
         public string arrivalTime;
+        public ambulance_vehicle(string num)
+        {
+            this.number = num;
+            this.next = null;
+        }
         public ambulance_vehicle(string num, Status stat)
         {
             this.number = num;
