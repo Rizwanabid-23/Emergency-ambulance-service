@@ -8,7 +8,6 @@ namespace Emergency_Ammbulance_Service
 {
     internal class graph
     {
-
         private int vertices;
         private List<Int32>[] adjLst;
         public graph(int vertices)

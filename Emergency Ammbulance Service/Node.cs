@@ -10,6 +10,7 @@ namespace Emergency_Ammbulance_Service
     {
         public int data;
         public Node next;
+        public Node parent;
 
         public Node(int data)
         {
