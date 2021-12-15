@@ -16,5 +16,17 @@ namespace Emergency_Ammbulance_Service
         {
             InitializeComponent();
         }
+
+        private void calculate_click(object sender, EventArgs e)
+        {
+            string start = start_combobox.Text;
+            string end = end_combobox.Text;
+
+
+
+        }
+
+
     }
+
 }

@@ -11,6 +11,7 @@ namespace Emergency_Ammbulance_Service
         public int data;
         public Node next;
         public Call Call { get; set; }
+        public Node parent;
         public Node(int data)
         {
             this.data = data;  

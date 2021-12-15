@@ -10,10 +10,7 @@ namespace Emergency_Ammbulance_Service
     {
         private static ambulance_list instance = null;
         public ambulance_vehicle head { get; set; }
-        private ambulance_list()
-        {
-            head = null;
-        }
+        
         public static ambulance_list vehichleInstance()
         {
             if (instance == null)
@@ -23,7 +20,10 @@ namespace Emergency_Ammbulance_Service
             return instance;
         }
 
-
+        private ambulance_list()
+        {
+            head = null;
+        }
         public bool isEmpty() // function will return true if list is empty else return false
         {
             if (this.head == null)
@@ -60,46 +60,17 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
-
-        public ambulance_vehicle searchVehichle(string number)
+        public int size()
         {
-
-            ambulance_vehicle veh = this.head;
-            while (veh != null)
+            int counter = 0;
+            ambulance_vehicle h = this.head;
+            while (h != null)
             {
-                if (veh.number == number)
-                {
-                    return veh;
-                }
-                veh = veh.next;
+                counter = counter + 1;
+                h = h.next;
             }
-            return veh;
+            return counter;
         }
-
-        public bool updateStatusToUnAvailable(string num)
-        {
-            ambulance_vehicle vehichle = searchVehichle(num);
-            if (vehichle != null)
-            {
-                string a = "Not Available";
-                vehichle.status = (Status)Enum.Parse(typeof(Status) , a);
-            }
-            return false;
-        }
-
-        public bool updateStatusToAvailable(string num)
-        {
-            ambulance_vehicle vehichle = searchVehichle(num);
-            if (vehichle != null)
-            {
-                string a = "Available";
-                vehichle.status = (Status)Enum.Parse(typeof(Status), a);
-            }
-            return false;
-        }
-
-
-
     }
 }
 

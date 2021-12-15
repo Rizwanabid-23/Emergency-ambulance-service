@@ -19,7 +19,7 @@ namespace Emergency_Ammbulance_Service
         private string action;
         private string CTWO;
 
-        public Call(string caller, string number, string time, string duration, string location, string emergencycode, string patient, string verified,string action, string cTWO)
+        public Call(string caller, string number, string time, string duration, string location, string emergencycode, string patient, string verified, string action, string cTWO)
         {
             this.caller = caller;
             this.number = number;

@@ -20,9 +20,7 @@ E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbul
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.Properties.Resources.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.sample.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.shifts.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.UserControl1.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.GenerateResource.cache
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.CoreCompileInputs.cache
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.exe
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.pdb
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.AssemblyReference.cache
