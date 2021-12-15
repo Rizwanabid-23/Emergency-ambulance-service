@@ -31,10 +31,12 @@ namespace Emergency_Ammbulance_Service
 
         public EmpList lst = EmpList.Instance;
         public ambulance_list a_list = ambulance_list.vehichleInstance();
+        ambulance_Queue amb_Queue_obj = ambulance_Queue.vehichleQueueInstance();
 
         public void add_ambulance(ambulance_vehicle a)
         {
             a_list.insert(a);
+            amb_Queue_obj.addAmbulance(a.number);
             this.Ahead = a_list.head;
         }
         public ambulance_vehicle get_amb_head()

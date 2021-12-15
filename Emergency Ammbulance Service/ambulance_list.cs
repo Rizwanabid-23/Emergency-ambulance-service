@@ -10,7 +10,10 @@ namespace Emergency_Ammbulance_Service
     {
         private static ambulance_list instance = null;
         public ambulance_vehicle head { get; set; }
-        
+        private ambulance_list()
+        {
+            head = null;
+        }
         public static ambulance_list vehichleInstance()
         {
             if (instance == null)
@@ -20,12 +23,7 @@ namespace Emergency_Ammbulance_Service
             return instance;
         }
 
-        ambulance_Queue amb_Queue_obj = ambulance_Queue.vehichleQueueInstance();
 
-        private ambulance_list()
-        {
-            head = null;
-        }
         public bool isEmpty() // function will return true if list is empty else return false
         {
             if (this.head == null)
@@ -39,7 +37,6 @@ namespace Emergency_Ammbulance_Service
         {
             n.next = head;
             head = n;
-            amb_Queue_obj.addAmbulance(n.number);
 
         }
 

@@ -70,6 +70,7 @@
     <Compile Include="ambulance_form.Designer.cs">
       <DependentUpon>ambulance_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="ambulance_Queue.cs" />
     <Compile Include="analytic_report.cs">
       <SubType>Form</SubType>
     </Compile>
