@@ -52,5 +52,13 @@ namespace Emergency_Ammbulance_Service
             parking park = new parking();
             park.Show();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            callLogs callLogs = new callLogs();
+            callLogs.Show();
+        }
+        
     }
 }

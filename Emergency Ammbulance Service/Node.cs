@@ -10,8 +10,12 @@ namespace Emergency_Ammbulance_Service
     {
         public int data;
         public Node next;
-
+        public Call Call { get; set; }
         public Node(int data)
+        {
+            this.data = data;  
+        }
+        public Node(int data, Call call)
         {
             this.data = data;
             this.next = null;

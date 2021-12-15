@@ -374,6 +374,7 @@ namespace Emergency_Ammbulance_Service
             this.Controls.Add(this.pictureBox2);
             this.Name = "callLogs";
             this.Text = "callLogs";
+            this.Load += new System.EventHandler(this.callLogs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

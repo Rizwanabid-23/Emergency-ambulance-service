@@ -8,18 +8,27 @@ namespace Emergency_Ammbulance_Service
 {
     internal class Stack
     {
-        public Node head;
-        public int stackSize;
-
-        public Stack()
+        private static Stack instance=null;
+        private Stack()
         {
-            this.head = null;
-            this.stackSize = 0;
         }
+        public static Stack Instance {
+            get {
+                if (instance == null)
+                {
+                    instance = new Stack();
+                }
+                return instance;
+            }
+        }
+        public Node head = null;
+        public int stackSize=0;
 
-        public void push(int entry)    //Function to insert entry in stack
+       
+
+        public void push(int entry, Call call)    //Function to insert entry in stack
         {
-            Node nNode = new Node(entry);
+            Node nNode = new Node(entry, call);
             if (this.head == null)
             {
                 this.head = nNode;
@@ -35,18 +44,18 @@ namespace Emergency_Ammbulance_Service
             }
         }
 
-        public int pop()   //Function to delete entry in destack
+        public Call pop()   //Function to delete entry in destack
         {
             if (this.head == null)
             {
-                return 0;
+                return null;
             }
 
             else
             {
                 this.stackSize = this.stackSize - 1;
-                int deleteData = 0;
-                deleteData = this.head.data;
+                Call deleteData;
+                deleteData = this.head.Call;
                 this.head = this.head.next;
                 return deleteData;
             }
@@ -58,9 +67,9 @@ namespace Emergency_Ammbulance_Service
             return this.stackSize;
         }
 
-        public int stackHead()   //This Function will return head of stack
+        public Call stackHead()   //This Function will return head of stack
         {
-            return this.head.data;
+            return this.head.Call;
         }
     }
 }

@@ -1,87 +1,28 @@
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.exe.config
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.exe
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.pdb
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csprojAssemblyReference.cache
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.failed.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.loginForm.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.Properties.Resources.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.sample.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.GenerateResource.cache
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.CoreCompileInputs.cache
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.exe
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.pdb
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.admin_main.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.employee_main.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_employees.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.exe.config
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.exe
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.pdb
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.AssemblyReference.cache
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.SuggestedBindingRedirects.cache
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_ambulance.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_employees.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.admin_main.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.ambulance_form.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.analytic_report.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.callLogs.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.call_center.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.current_status.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.dispatch_ambulance.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.employee_main.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.failed.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.loginForm.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.parking.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.path.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.patient_info_form.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.Properties.Resources.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.sample.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.shifts.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.UserControl1.resources
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.GenerateResource.cache
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.CoreCompileInputs.cache
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.exe
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.pdb
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_ambulance.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.analytic_report.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.callLogs.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.shifts.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_ambulance.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.analytic_report.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.callLogs.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.dispatch_ambulance.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.path.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.shifts.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.dispatch_ambulance.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.path.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.ambulance_form.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.ambulance_form.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.call_center.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.current_status.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.parking.resources
-C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.patient_info_form.resources
-<<<<<<< Updated upstream
-=======
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.exe.config
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.exe
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.pdb
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_ambulance.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_employees.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.admin_main.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.ambulance_form.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.analytic_report.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.callLogs.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.call_center.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.current_status.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.dispatch_ambulance.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.employee_main.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.failed.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.loginForm.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.parking.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.path.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.patient_info_form.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.Properties.Resources.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.sample.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.shifts.resources
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.GenerateResource.cache
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.CoreCompileInputs.cache
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.exe
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.pdb
->>>>>>> Stashed changes
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.call_center.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.current_status.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.parking.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.patient_info_form.resources
-E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.UserControl1.resources
-<<<<<<< Updated upstream
-=======
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.AssemblyReference.cache
-C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.UserControl1.resources
->>>>>>> Stashed changes
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.AssemblyReference.cache

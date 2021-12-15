@@ -280,7 +280,7 @@ namespace Emergency_Ammbulance_Service
             this.dataGridView1.Location = new System.Drawing.Point(253, 249);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(652, 165);
+            this.dataGridView1.Size = new System.Drawing.Size(619, 165);
             this.dataGridView1.TabIndex = 34;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -345,14 +345,6 @@ namespace Emergency_Ammbulance_Service
             this.view.Text = "Refresh";
             this.view.UseVisualStyleBackColor = true;
             this.view.Click += new System.EventHandler(this.view_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(487, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 36;
-            this.textBox1.Text = "Search term";
             // 
             // admin_main
             // 
