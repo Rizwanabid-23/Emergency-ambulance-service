@@ -22,7 +22,10 @@ namespace Emergency_Ammbulance_Service
         {
             CRI cri = CRI.Instance;
             ambulance_vehicle head = cri.get_amb_head();
-            
+
+            int total_ambs = 0;
+            int ambs_work = 0;
+            int ambs_available = 0;
             dataGridView1.Rows.Clear();
             while (head != null)
             {
@@ -30,8 +33,21 @@ namespace Emergency_Ammbulance_Service
                 Status status = head.status;
                 
                 dataGridView1.Rows.Add(number,status,null);
+                if(status==Status.Available)
+                {
+                    ambs_available++;
+                }
+                else if(status==Status.Unavailable)
+                {
+                    ambs_work++;
+                }
+                total_ambs++;
+
                 head = head.next;
             }
+            total_ambulances_label.Text = total_ambs.ToString();
+            work_ambulance_label.Text = ambs_work.ToString();
+            available_ambulance_label.Text = ambs_available.ToString();
         }
 
         private void employee_click(object sender, EventArgs e)

@@ -119,7 +119,7 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
-        public Employee searchEmployee(string attrib, String keyword)
+        public Employee searchEmployee(string attrib, string keyword)
         {
 
             Employee employee = this.head;

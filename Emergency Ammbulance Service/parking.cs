@@ -53,5 +53,12 @@ namespace Emergency_Ammbulance_Service
             form.Show();
 
         }
+
+        private void log_click(object sender, EventArgs e)
+        {
+            this.Hide();
+            callLogs log = new callLogs();
+            log.Show();
+        }
     }
 }

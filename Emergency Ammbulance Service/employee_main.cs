@@ -59,6 +59,10 @@ namespace Emergency_Ammbulance_Service
             callLogs callLogs = new callLogs();
             callLogs.Show();
         }
-        
+
+        private void profile_load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
