@@ -10,6 +10,7 @@ namespace Emergency_Ammbulance_Service
     {
         Unavailable,
         Available,
+        Dispatched
     }
     public enum Shift
     {

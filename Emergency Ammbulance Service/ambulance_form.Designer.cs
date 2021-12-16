@@ -265,8 +265,9 @@ namespace Emergency_Ammbulance_Service
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.Size = new System.Drawing.Size(331, 163);
+            this.dataGridView1.Size = new System.Drawing.Size(345, 192);
             this.dataGridView1.TabIndex = 60;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // plate_number_colomn
             // 

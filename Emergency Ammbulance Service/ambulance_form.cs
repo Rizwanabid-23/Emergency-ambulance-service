@@ -12,26 +12,47 @@ namespace Emergency_Ammbulance_Service
 {
     public partial class ambulance_form : Form
     {
+        ambulance_list lst = ambulance_list.vehichleInstance();
+        string plate;
+        
         public ambulance_form()
         {
             InitializeComponent();
+            total_ambulances_label.Text = lst.size().ToString();
             showGrid();
+
+
         }
 
         public void showGrid()
         {
-            CRI cri = CRI.Instance;
-            ambulance_vehicle head = cri.get_amb_head();
-            
-            dataGridView1.Rows.Clear();
-            while (head != null)
+            try
             {
-                string number = head.number;
-                Status status = head.status;
-                
-                dataGridView1.Rows.Add(number,status,null);
-                head = head.next;
+                CRI cri = CRI.Instance;
+                ambulance_vehicle head = cri.get_amb_head();
+
+                dataGridView1.Rows.Clear();
+                while (head != null)
+                {
+                    string number = head.number;
+                    Status status = head.status;
+                    if (head.driver != null)
+                    {
+                        dataGridView1.Rows.Add(number, status, head.driver.name);
+                    }
+                    else
+                    {
+                        dataGridView1.Rows.Add(number, status);
+                    }
+                    
+                    head = head.next;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
 
         private void employee_click(object sender, EventArgs e)
@@ -59,6 +80,7 @@ namespace Emergency_Ammbulance_Service
         {
             add_ambulance ambulance = new add_ambulance();
             ambulance.Show();
+
         }
 
         private void ctwo_report_clicked(object sender, EventArgs e)
@@ -84,12 +106,34 @@ namespace Emergency_Ammbulance_Service
 
         private void remove_ambulance_button_Click(object sender, EventArgs e)
         {
-
+            
+            if(lst.delete(plate))
+            {
+                MessageBox.Show("Deleted Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Not found");
+            }
         }
 
         private void refresh_click(object sender, EventArgs e)
         {
+            total_ambulances_label.Text = lst.size().ToString();
             showGrid();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = new DataGridViewRow();
+            int rowindex = dataGridView1.CurrentCell.RowIndex;
+            int columnindex = dataGridView1.CurrentCell.ColumnIndex;
+            if (rowindex >= 0)
+            {
+                plate = dataGridView1.Rows[rowindex].Cells["plate_number_colomn"].Value.ToString();
+
+            }
+            
         }
     }
 }

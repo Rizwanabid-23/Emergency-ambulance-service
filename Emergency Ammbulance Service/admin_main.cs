@@ -16,9 +16,11 @@ namespace Emergency_Ammbulance_Service
     {
         string name = "";
         Employee emp;
+        CRI cri = CRI.Instance;
         public admin_main()
         {
             InitializeComponent();
+            
 
         }
 
@@ -26,9 +28,9 @@ namespace Emergency_Ammbulance_Service
 
         public void show_Emp()
         {
-            CRI cRI = CRI.Instance;
-            Employee head = cRI.gethead();
-            Employee y = head;
+            
+            EmpList lst = EmpList.Instance;
+            Employee y = lst.head;
             int id, rating, phone;
             Type type;
             Shift shft;
@@ -154,7 +156,7 @@ namespace Emergency_Ammbulance_Service
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            CRI cri = CRI.Instance;
+            
             emp = cri.searchEmployee("Name",name);
             UpdateEmp updateEmp =  new UpdateEmp(emp);
             updateEmp.Show();
@@ -168,7 +170,7 @@ namespace Emergency_Ammbulance_Service
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            CRI cri = CRI.Instance;
+            
             emp = cri.searchEmployee("Name", name);
             bool del = cri.delete(emp);
             if (del)

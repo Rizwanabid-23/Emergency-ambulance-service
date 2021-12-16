@@ -40,12 +40,11 @@ namespace Emergency_Ammbulance_Service
 
         }
 
-        public bool deleteVehichle(string x)  //delete all occurrences of x
-        {
+        public bool delete(string x)  // Here function overloading is used to overload delete person
+        {                               // This will delete the employ which we want to search
             ambulance_vehicle h = this.head;
             if (h.number == x)
             {
-                head = null;
                 head = head.next;
                 return true;
             }

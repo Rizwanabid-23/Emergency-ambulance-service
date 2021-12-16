@@ -40,7 +40,7 @@ namespace Emergency_Ammbulance_Service
         }
         public ambulance_vehicle get_amb_head()
         {
-            return this.Ahead;
+            return a_list.head;
         }
 
         public void add_employee(Employee n)
@@ -143,7 +143,7 @@ namespace Emergency_Ammbulance_Service
                 }
 
                 employee = employee.next;
-                
+
 
 
             }
@@ -151,66 +151,39 @@ namespace Emergency_Ammbulance_Service
         }
         public bool delete(Employee x)  // Here function overloading is used to overload delete person
         {                               // This will delete the employ which we want to search
-            try
-            {
-                Employee current = this.head;
-                Employee next = current.next;
-                if (current.name == x.name)
-                {
-                    this.head = this.head.next;
-                    return true;
-                }
-                while (next != null)
-                {
-                    if (next.name == x.name)
-                    {
-                        current.next = next.next;
-                        return true;
-                    }
-                    current = next;
-                    next = next.next;
 
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);    
-            }
-            return false;
+            return lst.delete(x);
         }
-        public bool update(string key, string attrib,string changeTo)
+        public ambulance_vehicle getVhead()
         {
-            Employee emp = searchEmployee(attrib, key);
-            if(emp != null)
-            {
-                if (attrib == "Name")
-                {
-                    emp.setName(changeTo);
-                    return true;    
-                }
-                else if (attrib == "Shift")
-                {
-                   emp.setShift((Shift)Enum.Parse(typeof(Shift), key));
-                }
-                else if (attrib == "Catagory") 
-                {
-                    emp.setType((Type)Enum.Parse(typeof(Type), key));
-                    return true;
-                }
-                else if (attrib == "Phone") 
-                {
-                    emp.setPhone(int.Parse(key));
-                    return true;
-                }
-                else if (attrib == "Pin")
-                {
-                    emp.setPin(key);
-                    return true;
-                }
+            return a_list.head;
+        }
+        public void load_Ambulance()
+        {
+            Status status;
+            string st;
+            string plate;
+            string Driver;
+            string emt;
+            string[] lines = File.ReadAllLines("vehicle_data.txt");
 
+            foreach (string line in lines)
+            {
+                plate = getStr(line, 0);
+                st = getStr(line, 1);
+                Driver = getStr(line, 2);
+                emt = getStr(line, 3);
+                Enum.TryParse(st, out status);
+                ambulance_vehicle av = new ambulance_vehicle(plate, status);
+                if (Driver != "null" && emt != "null")
+                {
+                    Employee emp = this.searchEmployee("Driver", Driver);
+                    Employee EMT = this.searchEmployee("EMT", emt);
+                    av.setDriver(emp);
+                    av.setEmT(EMT);
+                }
+                a_list.insert(av);
             }
-            return false;
         }
     }
 }

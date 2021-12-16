@@ -73,6 +73,7 @@ namespace Emergency_Ammbulance_Service
         private void loginForm_Load(object sender, EventArgs e)
         {
             cRI.load_employee();
+            cRI.load_Ambulance();
         }
 
         private void pin_checkBox_CheckedChanged(object sender, EventArgs e)
