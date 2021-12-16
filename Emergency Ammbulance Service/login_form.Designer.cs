@@ -119,6 +119,7 @@ namespace Emergency_Ammbulance_Service
             this.pin_checkBox.TabIndex = 7;
             this.pin_checkBox.Text = "Show Password";
             this.pin_checkBox.UseVisualStyleBackColor = true;
+            this.pin_checkBox.CheckedChanged += new System.EventHandler(this.pin_checkBox_CheckedChanged);
             // 
             // loginButton
             // 

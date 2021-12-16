@@ -19,32 +19,51 @@ namespace Emergency_Ammbulance_Service
             InitializeComponent();
             counter_id = File.ReadAllLines("employee_data.txt").Length;
             ID_textbox.Text = counter_id.ToString();
+            password_textbox.Visible = false;
+            label9.Visible = false;
             counter_id++;
         }
         
 
         private void save_employee_info(object sender, EventArgs e)
         {
-            
-            int id = int.Parse(ID_textbox.Text);
-            string name = name_textbox.Text;
-            int rating = 0;
-            int phone = int.Parse(phone_textbox.Text);
-            int cnic = int.Parse(cnic_textbox.Text);
-            string adress = adress_textbox.Text;
-            string shf = shift_combobox.Text;
-            Shift shift;
-            Enum.TryParse(shf, out shift);
-            string employed_as = employedas_combobox.Text;
-            Type typ;
-            Enum.TryParse(employed_as, out typ);
-            string password = password_textbox.Text;
+            try
+            {
+                int id = int.Parse(ID_textbox.Text);
+                string name = name_textbox.Text;
+                int rating = 0;
+                int phone = int.Parse(phone_textbox.Text);
+                int cnic = int.Parse(cnic_textbox.Text);
+                string adress = adress_textbox.Text;
+                string shf = shift_combobox.Text;
+                Shift shift;
+                Enum.TryParse(shf, out shift);
+                string employed_as = employedas_combobox.Text;
+                Type typ;
+                Enum.TryParse(employed_as, out typ);
+                string password = password_textbox.Text;
+                Employee emp;
+                if (employedas_combobox.Text == "CTWO")
+                {
+                   emp = new Employee(id, name, rating, phone, cnic, adress, shift, Status.Unavailable, typ, password);
+                }
+                else
+                {
+                    emp = new Employee(id, name, rating, phone, cnic, adress, shift, Status.Unavailable, typ);
+                }
 
-            Employee emp = new Employee(id, name, rating, phone, cnic, adress, shift, Status.Unavailable, typ, password);
-            CRI cri = CRI.Instance;
-            cri.add_employee(emp);
+                
+                CRI cri = CRI.Instance;
+                cri.add_employee(emp);
+
+                this.Hide();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             
-            this.Hide();
         }
 
         private void clear_textbox(object sender, EventArgs e)
@@ -57,6 +76,21 @@ namespace Emergency_Ammbulance_Service
                         ((TextBox)c).Text = String.Empty;
                     }
                 }
+            }
+        }
+
+        private void employedas_combobox_TextUpdate(object sender, EventArgs e)
+        {
+            if (employedas_combobox.Text == "CTWO")
+            {
+                password_textbox.Visible = true;
+                label9.Visible = true;
+
+            }
+            else
+            {
+                password_textbox.Visible = false;
+                label9.Visible = false;
             }
         }
     }

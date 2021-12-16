@@ -6,23 +6,26 @@ using System.Threading.Tasks;
 
 namespace Emergency_Ammbulance_Service
 {
-    internal class Stack
+    internal class stack
     {
-        private static Stack instance=null;
-        private Stack()
+        private Node head;
+        private int stackSize;
+        private static stack instance=null;
+        private stack()
         {
+            head = null;
+            stackSize = 0;
         }
-        public static Stack Instance {
+        public static stack Instance {
             get {
                 if (instance == null)
                 {
-                    instance = new Stack();
+                    instance = new stack();
                 }
                 return instance;
             }
         }
-        public Node head = null;
-        public int stackSize=0;
+        
 
        
 
@@ -33,32 +36,26 @@ namespace Emergency_Ammbulance_Service
             {
                 this.head = nNode;
                 this.head.next = null;
-                this.stackSize = this.stackSize + 1;
+                
             }
 
             else
             {
                 nNode.next = head;
                 this.head = nNode;
-                this.stackSize = this.stackSize + 1;
+                
             }
+            this.stackSize = this.stackSize + 1;
         }
 
         public Call pop()   //Function to delete entry in destack
         {
-            if (this.head == null)
-            {
-                return null;
-            }
-
-            else
-            {
                 this.stackSize = this.stackSize - 1;
                 Call deleteData;
                 deleteData = this.head.Call;
                 this.head = this.head.next;
                 return deleteData;
-            }
+            
 
         }
 

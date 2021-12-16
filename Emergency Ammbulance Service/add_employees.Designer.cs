@@ -276,6 +276,8 @@ namespace Emergency_Ammbulance_Service
             this.employedas_combobox.Name = "employedas_combobox";
             this.employedas_combobox.Size = new System.Drawing.Size(108, 21);
             this.employedas_combobox.TabIndex = 54;
+            this.employedas_combobox.SelectedIndexChanged += new System.EventHandler(this.employedas_combobox_TextUpdate);
+            this.employedas_combobox.TextUpdate += new System.EventHandler(this.employedas_combobox_TextUpdate);
             // 
             // add_employees
             // 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -11,8 +12,10 @@ using System.Windows.Forms;
 
 namespace Emergency_Ammbulance_Service
 {
+
     public partial class callLogs : Form
     {
+        Stack<Call> stack = new Stack<Call>();
         public callLogs()
         {
             InitializeComponent();
@@ -78,11 +81,11 @@ namespace Emergency_Ammbulance_Service
                     ((RadioButton)c).Checked = false;
                 }
             }
-        }
-
+        } 
         private void callLogs_Load(object sender, EventArgs e)
         {
             load_call();
+            this.show();
         }
         public void load_call()
         {
@@ -96,10 +99,11 @@ namespace Emergency_Ammbulance_Service
              string action;
              string verified;
              string CTWO;
-        string[] lines = File.ReadAllLines("employee_data.txt");
-            Stack stack = Stack.Instance;
+        string[] lines = File.ReadAllLines("Call_Logs.txt");
+            
             foreach (string line in lines)
             {
+                
                 caller = getStr(line, 0);
                 number = getStr(line, 1);
                 time =  getStr(line, 2);
@@ -111,7 +115,7 @@ namespace Emergency_Ammbulance_Service
                 action = getStr(line, 8);
                 CTWO = getStr(line, 9);
                 Call call = new Call(caller, number,time, Duration, location, Emergencycode, patient, verified, action, CTWO);
-                stack.push(int.Parse(Emergencycode),call);
+                stack.Push(call);
             }
         }
         private string getStr(string statement, int position)
@@ -134,6 +138,33 @@ namespace Emergency_Ammbulance_Service
             }
             return word;
         }
-
+        private void show()
+        {
+            try
+            {
+                
+                Call call = stack.Pop();//
+                string caller = call.caller;
+                string number = call.number;
+                string time = call.time;
+                string duration = call.Duration;
+                string location = call.location;
+                string EC = call.Emergencycode;
+                string patient = call.patient;
+                string verified = call.verified;
+                string action = call.action;
+                string CTWO = call.CTWO;
+                while (call != null)
+                {
+                    call = stack.Pop();
+                    showCallLogs.Rows.Add(call.caller, call.number, call.time, call.Duration, call.location, call.Emergencycode, call.patient, call.verified, call.action, call.CTWO);
+                    //Console.WriteLine(stack.sizeOfStack());
+                }
+            }
+            catch (Exception ex)
+            {
+               // MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

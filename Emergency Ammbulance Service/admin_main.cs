@@ -14,6 +14,8 @@ namespace Emergency_Ammbulance_Service
 {
     public partial class admin_main : Form
     {
+        string name = "";
+        Employee emp;
         public admin_main()
         {
             InitializeComponent();
@@ -131,7 +133,7 @@ namespace Emergency_Ammbulance_Service
             }
             catch (NullReferenceException m)
             {
-                MessageBox.Show("Found Nothing");
+                MessageBox.Show("Found Nothing ");
             }
 
             
@@ -140,13 +142,44 @@ namespace Emergency_Ammbulance_Service
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*if (e.RowIndex >= 0)
+            DataGridViewRow row = new DataGridViewRow();
+            int rowindex = dataGridView1.CurrentCell.RowIndex;
+            int columnindex = dataGridView1.CurrentCell.ColumnIndex;
+            if (rowindex >= 0)
+            {          
+                name = dataGridView1.Rows[rowindex].Cells["nameColumn"].Value.ToString();
+            }
+            
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            CRI cri = CRI.Instance;
+            emp = cri.searchEmployee("Name",name);
+            UpdateEmp updateEmp =  new UpdateEmp(emp);
+            updateEmp.Show();
+            updateEmp.BringToFront();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            CRI cri = CRI.Instance;
+            emp = cri.searchEmployee("Name", name);
+            bool del = cri.delete(emp);
+            if (del)
             {
-                DataGridViewRow row = new DataGridViewRow();
-                CRI cri = CRI.Instance; 
-                    cri.searchEmployee(,);
-            }*/
-            // row.Cells["Name"].Value.ToString()
+                MessageBox.Show("Deleted Successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Not found!");
+            }
+            view.PerformClick();
         }
     }
 }

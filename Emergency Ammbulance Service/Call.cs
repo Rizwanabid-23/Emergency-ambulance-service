@@ -8,16 +8,16 @@ namespace Emergency_Ammbulance_Service
 {
     public class Call
     {
-        private string caller;
-        private string number;
-        private string time;
-        private string Duration;
-        private string location;
-        private string Emergencycode;
-        private string patient;
-        private string verified;
-        private string action;
-        private string CTWO;
+        public string caller { get; private set;}
+        public string number { get; private set; }
+        public string time { get; private set; }
+        public string Duration { get; private set; }
+        public string location { get; private set; }
+        public string Emergencycode { get; private set; }
+        public string patient { get; private set; }
+        public string verified { get; private set; }
+        public string action { get; private set; }
+        public string CTWO { get; private set; }
 
         public Call(string caller, string number, string time, string duration, string location, string emergencycode, string patient, string verified, string action, string cTWO)
         {

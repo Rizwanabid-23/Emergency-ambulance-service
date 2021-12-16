@@ -29,7 +29,17 @@ namespace Emergency_Ammbulance_Service
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.showCallLogs = new System.Windows.Forms.DataGridView();
+            this.caller_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.number_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duration_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.location_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emergency_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patient_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.verification_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.response_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ctwo_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -48,25 +58,15 @@ namespace Emergency_Ammbulance_Service
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.caller_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.number_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duration_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.location_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emergency_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patient_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.verification_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.response_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ctwo_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showCallLogs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // showCallLogs
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.showCallLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.showCallLogs.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.showCallLogs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.caller_column,
             this.number_column,
             this.time_column,
@@ -77,11 +77,71 @@ namespace Emergency_Ammbulance_Service
             this.verification_column,
             this.response_column,
             this.ctwo_column});
-            this.dataGridView1.Location = new System.Drawing.Point(271, 167);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(486, 220);
-            this.dataGridView1.TabIndex = 56;
+            this.showCallLogs.Location = new System.Drawing.Point(271, 167);
+            this.showCallLogs.Name = "showCallLogs";
+            this.showCallLogs.ReadOnly = true;
+            this.showCallLogs.Size = new System.Drawing.Size(544, 220);
+            this.showCallLogs.TabIndex = 56;
+            // 
+            // caller_column
+            // 
+            this.caller_column.HeaderText = "Caller";
+            this.caller_column.Name = "caller_column";
+            this.caller_column.ReadOnly = true;
+            // 
+            // number_column
+            // 
+            this.number_column.HeaderText = "Number";
+            this.number_column.Name = "number_column";
+            this.number_column.ReadOnly = true;
+            // 
+            // time_column
+            // 
+            this.time_column.HeaderText = "Time";
+            this.time_column.Name = "time_column";
+            this.time_column.ReadOnly = true;
+            // 
+            // duration_column
+            // 
+            this.duration_column.HeaderText = "Duration";
+            this.duration_column.Name = "duration_column";
+            this.duration_column.ReadOnly = true;
+            // 
+            // location_column
+            // 
+            this.location_column.HeaderText = "Location";
+            this.location_column.Name = "location_column";
+            this.location_column.ReadOnly = true;
+            // 
+            // emergency_column
+            // 
+            this.emergency_column.HeaderText = "Emergency";
+            this.emergency_column.Name = "emergency_column";
+            this.emergency_column.ReadOnly = true;
+            // 
+            // patient_column
+            // 
+            this.patient_column.HeaderText = "Patient";
+            this.patient_column.Name = "patient_column";
+            this.patient_column.ReadOnly = true;
+            // 
+            // verification_column
+            // 
+            this.verification_column.HeaderText = "Verified";
+            this.verification_column.Name = "verification_column";
+            this.verification_column.ReadOnly = true;
+            // 
+            // response_column
+            // 
+            this.response_column.HeaderText = "Response";
+            this.response_column.Name = "response_column";
+            this.response_column.ReadOnly = true;
+            // 
+            // ctwo_column
+            // 
+            this.ctwo_column.HeaderText = "CTWO";
+            this.ctwo_column.Name = "ctwo_column";
+            this.ctwo_column.ReadOnly = true;
             // 
             // button10
             // 
@@ -287,75 +347,15 @@ namespace Emergency_Ammbulance_Service
             this.radioButton2.Text = "Descending";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // caller_column
-            // 
-            this.caller_column.HeaderText = "Caller";
-            this.caller_column.Name = "caller_column";
-            this.caller_column.ReadOnly = true;
-            // 
-            // number_column
-            // 
-            this.number_column.HeaderText = "Number";
-            this.number_column.Name = "number_column";
-            this.number_column.ReadOnly = true;
-            // 
-            // time_column
-            // 
-            this.time_column.HeaderText = "Time";
-            this.time_column.Name = "time_column";
-            this.time_column.ReadOnly = true;
-            // 
-            // duration_column
-            // 
-            this.duration_column.HeaderText = "Duration";
-            this.duration_column.Name = "duration_column";
-            this.duration_column.ReadOnly = true;
-            // 
-            // location_column
-            // 
-            this.location_column.HeaderText = "Location";
-            this.location_column.Name = "location_column";
-            this.location_column.ReadOnly = true;
-            // 
-            // emergency_column
-            // 
-            this.emergency_column.HeaderText = "Emergency";
-            this.emergency_column.Name = "emergency_column";
-            this.emergency_column.ReadOnly = true;
-            // 
-            // patient_column
-            // 
-            this.patient_column.HeaderText = "Patient";
-            this.patient_column.Name = "patient_column";
-            this.patient_column.ReadOnly = true;
-            // 
-            // verification_column
-            // 
-            this.verification_column.HeaderText = "Verified";
-            this.verification_column.Name = "verification_column";
-            this.verification_column.ReadOnly = true;
-            // 
-            // response_column
-            // 
-            this.response_column.HeaderText = "Response";
-            this.response_column.Name = "response_column";
-            this.response_column.ReadOnly = true;
-            // 
-            // ctwo_column
-            // 
-            this.ctwo_column.HeaderText = "CTWO";
-            this.ctwo_column.Name = "ctwo_column";
-            this.ctwo_column.ReadOnly = true;
-            // 
             // callLogs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(848, 428);
+            this.Controls.Add(this.showCallLogs);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -375,7 +375,7 @@ namespace Emergency_Ammbulance_Service
             this.Name = "callLogs";
             this.Text = "callLogs";
             this.Load += new System.EventHandler(this.callLogs_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showCallLogs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -383,7 +383,7 @@ namespace Emergency_Ammbulance_Service
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView showCallLogs;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;

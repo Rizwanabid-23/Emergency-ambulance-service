@@ -184,7 +184,7 @@ namespace Emergency_Ammbulance_Service
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(79, 23);
             this.button6.TabIndex = 66;
-            this.button6.Text = "Receive call";
+            this.button6.Text = "Track";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.receive_call_click);
             // 
@@ -230,6 +230,8 @@ namespace Emergency_Ammbulance_Service
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(504, 190);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
@@ -237,6 +239,8 @@ namespace Emergency_Ammbulance_Service
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(504, 225);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
@@ -244,6 +248,8 @@ namespace Emergency_Ammbulance_Service
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(504, 156);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
@@ -251,6 +257,8 @@ namespace Emergency_Ammbulance_Service
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(504, 295);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
@@ -258,6 +266,8 @@ namespace Emergency_Ammbulance_Service
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(504, 260);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);

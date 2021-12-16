@@ -301,9 +301,9 @@ namespace Emergency_Ammbulance_Service
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(377, 311);
+            this.textBox1.Location = new System.Drawing.Point(345, 311);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(132, 20);
             this.textBox1.TabIndex = 79;
             // 
             // current_status

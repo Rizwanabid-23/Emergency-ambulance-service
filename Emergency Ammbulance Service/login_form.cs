@@ -17,8 +17,7 @@ namespace Emergency_Ammbulance_Service
         public loginForm()
         {
             InitializeComponent();
-           
-
+            login_password.PasswordChar = '*';
         }
 
 
@@ -74,6 +73,19 @@ namespace Emergency_Ammbulance_Service
         private void loginForm_Load(object sender, EventArgs e)
         {
             cRI.load_employee();
+        }
+
+        private void pin_checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pin_checkBox.Checked)
+            {
+                login_password.PasswordChar = '\0';
+            }
+            else
+            {
+                login_password.PasswordChar = '*';
+            }
+            
         }
     }
 }

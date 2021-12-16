@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.IO;
 
@@ -140,34 +141,43 @@ namespace Emergency_Ammbulance_Service
                 {
                     return employee;
                 }
-                
 
                 employee = employee.next;
+                
+
+
             }
             return employee;
         }
         public bool delete(Employee x)  // Here function overloading is used to overload delete person
         {                               // This will delete the employ which we want to search
-            Employee current = this.head;
-            Employee next = current.next;
-            if (current == x)
+            try
             {
-                this.head = this.head.next;
-                return true;
-            }
-            while (next != null)
-            {
-                if (current == x)
+                Employee current = this.head;
+                Employee next = current.next;
+                if (current.name == x.name)
                 {
-                    current = next;
+                    this.head = this.head.next;
                     return true;
                 }
-                current = next;
-                next = next.next;   
+                while (next != null)
+                {
+                    if (next.name == x.name)
+                    {
+                        current.next = next.next;
+                        return true;
+                    }
+                    current = next;
+                    next = next.next;
+
+                }
                 
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);    
+            }
             return false;
-
         }
         public bool update(string key, string attrib,string changeTo)
         {
