@@ -161,6 +161,7 @@ namespace Emergency_Ammbulance_Service
             this.search_button.TabIndex = 46;
             this.search_button.Text = "Search";
             this.search_button.UseVisualStyleBackColor = true;
+            this.search_button.Click += new System.EventHandler(this.search_click);
             // 
             // label3
             // 
@@ -277,8 +278,9 @@ namespace Emergency_Ammbulance_Service
             this.column_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.column_comboBox.FormattingEnabled = true;
             this.column_comboBox.Items.AddRange(new object[] {
-            "ID",
-            "Name"});
+            "Name",
+            "Position",
+            "Shift"});
             this.column_comboBox.Location = new System.Drawing.Point(461, 215);
             this.column_comboBox.Name = "column_comboBox";
             this.column_comboBox.Size = new System.Drawing.Size(121, 21);

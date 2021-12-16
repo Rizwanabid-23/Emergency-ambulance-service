@@ -26,3 +26,30 @@ E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbul
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.pdb
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.AssemblyReference.cache
 E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.UpdateEmp.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.exe.config
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.exe
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\bin\Debug\Emergency Ammbulance Service.pdb
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csprojAssemblyReference.cache
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_ambulance.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.add_employees.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.admin_main.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.ambulance_form.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.analytic_report.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.callLogs.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.call_center.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.current_status.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.dispatch_ambulance.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.employee_main.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.failed.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.UpdateEmp.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.loginForm.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.parking.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.path.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.patient_info_form.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.Properties.Resources.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.sample.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.shifts.resources
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.GenerateResource.cache
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.CoreCompileInputs.cache
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.exe
+C:\Users\rizwa\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.pdb

@@ -26,33 +26,18 @@ namespace Emergency_Ammbulance_Service
 
         public void showGrid()
         {
-            try
+            CRI cri = CRI.Instance;
+            ambulance_vehicle head = cri.get_amb_head();
+            
+            dataGridView1.Rows.Clear();
+            while (head != null)
             {
-                CRI cri = CRI.Instance;
-                ambulance_vehicle head = cri.get_amb_head();
-
-                dataGridView1.Rows.Clear();
-                while (head != null)
-                {
-                    string number = head.number;
-                    Status status = head.status;
-                    if (head.driver != null)
-                    {
-                        dataGridView1.Rows.Add(number, status, head.driver.name);
-                    }
-                    else
-                    {
-                        dataGridView1.Rows.Add(number, status);
-                    }
-                    
-                    head = head.next;
-                }
+                string number = head.number;
+                Status status = head.status;
+                
+                dataGridView1.Rows.Add(number,status,null);
+                head = head.next;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-           
         }
 
         private void employee_click(object sender, EventArgs e)

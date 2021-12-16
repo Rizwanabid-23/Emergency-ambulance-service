@@ -50,7 +50,6 @@ namespace Emergency_Ammbulance_Service
             this.shift_label = new System.Windows.Forms.Label();
             this.postion_label = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -277,25 +276,12 @@ namespace Emergency_Ammbulance_Service
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // button9
-            // 
-            this.button9.AutoSize = true;
-            this.button9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Location = new System.Drawing.Point(55, 276);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(112, 23);
-            this.button9.TabIndex = 55;
-            this.button9.Text = "Call logs";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
             // employee_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(841, 410);
-            this.Controls.Add(this.button9);
             this.Controls.Add(this.postion_label);
             this.Controls.Add(this.shift_label);
             this.Controls.Add(this.phone_label);
@@ -319,6 +305,7 @@ namespace Emergency_Ammbulance_Service
             this.Controls.Add(this.pictureBox2);
             this.Name = "employee_main";
             this.Text = "employee_main";
+            this.Load += new System.EventHandler(this.profile_load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -348,6 +335,5 @@ namespace Emergency_Ammbulance_Service
         private System.Windows.Forms.Label phone_label;
         private System.Windows.Forms.Label shift_label;
         private System.Windows.Forms.Label postion_label;
-        private System.Windows.Forms.Button button9;
     }
 }

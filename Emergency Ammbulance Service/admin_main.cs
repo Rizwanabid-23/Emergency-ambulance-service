@@ -20,7 +20,6 @@ namespace Emergency_Ammbulance_Service
         public admin_main()
         {
             InitializeComponent();
-            
 
         }
 
@@ -35,6 +34,7 @@ namespace Emergency_Ammbulance_Service
             Type type;
             Shift shft;
             dataGridView1.Rows.Clear();
+            int employee_counter = 0;
             while (y != null)
             {
                 id = y.id;
@@ -45,7 +45,9 @@ namespace Emergency_Ammbulance_Service
                 shft = y.shift;
                 dataGridView1.Rows.Add(id, Name, rating, type, shft , phone, y.pin);
                 y = y.next;
+                employee_counter++;
             }
+            total_employees_label.Text = employee_counter.ToString();
         }
 
         
@@ -137,16 +139,13 @@ namespace Emergency_Ammbulance_Service
             {
                 MessageBox.Show("Found Nothing ");
             }
-
-            
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = new DataGridViewRow();
+            
             int rowindex = dataGridView1.CurrentCell.RowIndex;
-            int columnindex = dataGridView1.CurrentCell.ColumnIndex;
+            
             if (rowindex >= 0)
             {          
                 name = dataGridView1.Rows[rowindex].Cells["nameColumn"].Value.ToString();
