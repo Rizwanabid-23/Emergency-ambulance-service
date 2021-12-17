@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Emergency_Ammbulance_Service
 {
+  
     class EmpList
     {
         private static EmpList instance = null;
@@ -21,6 +22,25 @@ namespace Emergency_Ammbulance_Service
                 return instance;
             }
         }
+
+        public List<Employee> getAvailableList(Type typ)
+        {
+            List<Employee> availableEmp = new List<Employee>();
+            Employee h = this.head;
+            while (h != null)
+            {
+               
+                if ((h.type == typ) && (h.status == Status.Available))
+                {
+                    availableEmp.Add(h);
+                    
+                }
+                h = h.next;
+            }
+            return availableEmp;
+            
+        }
+        
         
 
         // public varibles and methods of link list are here
@@ -114,6 +134,45 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
+
+        public Employee searchEmp(string number)
+        {
+
+            Employee emp = this.head;
+            while (emp != null)
+            {
+                if (emp.name == number)
+                {
+                    return emp;
+                }
+                emp = emp.next;
+            }
+            return emp;
+        }
+
+
+
+        public bool updateStatusToUnAvailable(string num)
+        {
+            Employee emp = searchEmp(num);
+            if (emp != null)
+            {
+                emp.setStatus(Status.Dispatched);
+            }
+            return false;
+        }
+
+        public bool updateStatusToAvailable(string num)
+        {
+            Employee emp = searchEmp(num);
+            if (emp != null)
+            {
+                emp.setStatus(Status.Available);
+            }
+            return false;
+        }
+
+
 
         public bool searchEmp(int searchby , string toSearch) //search for data value toSearch in the list
         {

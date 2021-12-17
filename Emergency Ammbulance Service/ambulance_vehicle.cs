@@ -16,6 +16,11 @@ namespace Emergency_Ammbulance_Service
         public Employee driver { get; private set; }
         public Employee EMT { get; private set; }
 
+        public ambulance_vehicle(string num)
+        {
+            this.number = num;
+            this.next = null;
+        }
         public ambulance_vehicle(string num, Status stat)
         {
             this.number = num;
@@ -42,6 +47,10 @@ namespace Emergency_Ammbulance_Service
         public void setDispatchTime(string time)
         {
             this.dispachTime = time;
+        }
+        public void setStatus(Status st)
+        {
+            this.status = st;
         }
     }
 }

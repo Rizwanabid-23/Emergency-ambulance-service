@@ -70,6 +70,7 @@
     <Compile Include="ambulance_form.Designer.cs">
       <DependentUpon>ambulance_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="ambulance_Queue.cs" />
     <Compile Include="analytic_report.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +78,8 @@
       <DependentUpon>analytic_report.cs</DependentUpon>
     </Compile>
     <Compile Include="Call.cs" />
+    <Compile Include="Caller.cs" />
+    <Compile Include="CallerBst.cs" />
     <Compile Include="callLogs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +100,7 @@
     <Compile Include="current_status.Designer.cs">
       <DependentUpon>current_status.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataStructures.cs" />
     <Compile Include="dispatch_ambulance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,7 +134,6 @@
     <Compile Include="login_form.Designer.cs">
       <DependentUpon>login_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Node.cs" />
     <Compile Include="node_graph.cs" />
     <Compile Include="parking.cs">
       <SubType>Form</SubType>
@@ -144,6 +147,7 @@
     <Compile Include="path.Designer.cs">
       <DependentUpon>path.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs" />
     <Compile Include="patient_info_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,7 +158,8 @@
     <Compile Include="prims_graph.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queue.cs" />
+    <Compile Include="RBTree.cs" />
+    <Compile Include="RedBlackNode.cs" />
     <Compile Include="sample.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,7 +172,6 @@
     <Compile Include="shifts.Designer.cs">
       <DependentUpon>shifts.cs</DependentUpon>
     </Compile>
-    <Compile Include="stack.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="ambulance_vehicle.cs" />
     <Compile Include="ambulance_list.cs" />
@@ -250,6 +254,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\newrescue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="employee_data.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

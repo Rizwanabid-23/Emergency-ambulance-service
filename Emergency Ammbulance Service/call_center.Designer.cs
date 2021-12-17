@@ -39,7 +39,7 @@ namespace Emergency_Ammbulance_Service
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PhoneNumber = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -171,12 +171,13 @@ namespace Emergency_Ammbulance_Service
             this.label1.TabIndex = 47;
             this.label1.Text = "Emergency";
             // 
-            // textBox1
+            // PhoneNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(504, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 65;
+            this.PhoneNumber.Location = new System.Drawing.Point(504, 98);
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.PhoneNumber.TabIndex = 65;
+            this.PhoneNumber.TextChanged += new System.EventHandler(this.PhoneNumber_TextChanged);
             // 
             // button6
             // 
@@ -330,7 +331,7 @@ namespace Emergency_Ammbulance_Service
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PhoneNumber);
             this.Controls.Add(this.id_label);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
@@ -362,7 +363,7 @@ namespace Emergency_Ammbulance_Service
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PhoneNumber;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

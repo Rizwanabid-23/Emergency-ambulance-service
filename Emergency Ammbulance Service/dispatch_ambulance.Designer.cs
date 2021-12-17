@@ -29,7 +29,7 @@ namespace Emergency_Ammbulance_Service
         /// </summary>
         private void InitializeComponent()
         {
-            this.id_label = new System.Windows.Forms.Label();
+            this.selectedVehichle = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,47 +38,45 @@ namespace Emergency_Ammbulance_Service
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.plate_num_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.selection_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.driverForDispatch = new System.Windows.Forms.DataGridView();
             this.id_driver_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status_driver_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.selection_driver_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_helper_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status_helper_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.selection_helper_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emtForDIspatch = new System.Windows.Forms.DataGridView();
+            this.totalEmt = new System.Windows.Forms.Label();
+            this.availableDriver = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.selectedDriver = new System.Windows.Forms.Label();
+            this.selectedEmt = new System.Windows.Forms.Label();
+            this.id_emt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameEMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverForDispatch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emtForDIspatch)).BeginInit();
             this.SuspendLayout();
             // 
-            // id_label
+            // selectedVehichle
             // 
-            this.id_label.AutoSize = true;
-            this.id_label.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_label.Location = new System.Drawing.Point(626, 69);
-            this.id_label.Name = "id_label";
-            this.id_label.Size = new System.Drawing.Size(17, 19);
-            this.id_label.TabIndex = 64;
-            this.id_label.Text = "0";
+            this.selectedVehichle.AutoSize = true;
+            this.selectedVehichle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedVehichle.Location = new System.Drawing.Point(687, 120);
+            this.selectedVehichle.Name = "selectedVehichle";
+            this.selectedVehichle.Size = new System.Drawing.Size(17, 19);
+            this.selectedVehichle.TabIndex = 64;
+            this.selectedVehichle.Text = "0";
+            this.selectedVehichle.Click += new System.EventHandler(this.id_label_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(368, 69);
+            this.label4.Location = new System.Drawing.Point(678, 98);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 19);
+            this.label4.Size = new System.Drawing.Size(132, 19);
             this.label4.TabIndex = 56;
-            this.label4.Text = "Ambulances available";
+            this.label4.Text = "Selected Ambulance";
             // 
             // label3
             // 
@@ -136,111 +134,36 @@ namespace Emergency_Ammbulance_Service
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(368, 279);
+            this.label5.Location = new System.Drawing.Point(293, 240);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 19);
+            this.label5.Size = new System.Drawing.Size(41, 19);
             this.label5.TabIndex = 72;
-            this.label5.Text = "Helpers available";
+            this.label5.Text = "EMT";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(368, 174);
+            this.label6.Location = new System.Drawing.Point(293, 98);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 19);
+            this.label6.Size = new System.Drawing.Size(53, 19);
             this.label6.TabIndex = 73;
-            this.label6.Text = "Drivers available";
+            this.label6.Text = "Drivers";
             // 
-            // dataGridView1
+            // driverForDispatch
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.plate_num_column,
-            this.status_column,
-            this.selection_column});
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(359, 91);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView1.Size = new System.Drawing.Size(327, 69);
-            this.dataGridView1.TabIndex = 74;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.driverForDispatch.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.driverForDispatch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.driverForDispatch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_driver_column,
-            this.status_driver_column,
-            this.selection_driver_column});
-            this.dataGridView2.Location = new System.Drawing.Point(359, 196);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView2.Size = new System.Drawing.Size(327, 67);
-            this.dataGridView2.TabIndex = 75;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_helper_column,
-            this.status_helper_column,
-            this.selection_helper_column});
-            this.dataGridView3.Location = new System.Drawing.Point(359, 301);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView3.Size = new System.Drawing.Size(327, 67);
-            this.dataGridView3.TabIndex = 76;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(626, 279);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(17, 19);
-            this.label7.TabIndex = 77;
-            this.label7.Text = "0";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(626, 174);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(17, 19);
-            this.label8.TabIndex = 78;
-            this.label8.Text = "0";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(731, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 79;
-            this.button1.Text = "Continue";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // plate_num_column
-            // 
-            this.plate_num_column.HeaderText = "Plate number";
-            this.plate_num_column.Name = "plate_num_column";
-            this.plate_num_column.ReadOnly = true;
-            // 
-            // status_column
-            // 
-            this.status_column.HeaderText = "Status";
-            this.status_column.Name = "status_column";
-            this.status_column.ReadOnly = true;
-            // 
-            // selection_column
-            // 
-            this.selection_column.HeaderText = "Selection";
-            this.selection_column.Name = "selection_column";
-            this.selection_column.ReadOnly = true;
+            this.status_driver_column});
+            this.driverForDispatch.Location = new System.Drawing.Point(297, 120);
+            this.driverForDispatch.Name = "driverForDispatch";
+            this.driverForDispatch.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.driverForDispatch.Size = new System.Drawing.Size(245, 86);
+            this.driverForDispatch.TabIndex = 75;
+            this.driverForDispatch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.driverForDispatch_CellContentClick);
             // 
             // id_driver_column
             // 
@@ -250,33 +173,105 @@ namespace Emergency_Ammbulance_Service
             // 
             // status_driver_column
             // 
-            this.status_driver_column.HeaderText = "Status";
+            this.status_driver_column.HeaderText = "Name";
             this.status_driver_column.Name = "status_driver_column";
             this.status_driver_column.ReadOnly = true;
             // 
-            // selection_driver_column
+            // emtForDIspatch
             // 
-            this.selection_driver_column.HeaderText = "Selection";
-            this.selection_driver_column.Name = "selection_driver_column";
-            this.selection_driver_column.ReadOnly = true;
+            this.emtForDIspatch.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.emtForDIspatch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.emtForDIspatch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_emt,
+            this.nameEMT});
+            this.emtForDIspatch.Location = new System.Drawing.Point(297, 266);
+            this.emtForDIspatch.Name = "emtForDIspatch";
+            this.emtForDIspatch.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.emtForDIspatch.Size = new System.Drawing.Size(245, 124);
+            this.emtForDIspatch.TabIndex = 76;
+            this.emtForDIspatch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.emtForDIspatch_CellClick);
             // 
-            // id_helper_column
+            // totalEmt
             // 
-            this.id_helper_column.HeaderText = "ID";
-            this.id_helper_column.Name = "id_helper_column";
-            this.id_helper_column.ReadOnly = true;
+            this.totalEmt.AutoSize = true;
+            this.totalEmt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalEmt.Location = new System.Drawing.Point(525, 241);
+            this.totalEmt.Name = "totalEmt";
+            this.totalEmt.Size = new System.Drawing.Size(17, 19);
+            this.totalEmt.TabIndex = 77;
+            this.totalEmt.Text = "0";
             // 
-            // status_helper_column
+            // availableDriver
             // 
-            this.status_helper_column.HeaderText = "Status";
-            this.status_helper_column.Name = "status_helper_column";
-            this.status_helper_column.ReadOnly = true;
+            this.availableDriver.AutoSize = true;
+            this.availableDriver.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.availableDriver.Location = new System.Drawing.Point(525, 98);
+            this.availableDriver.Name = "availableDriver";
+            this.availableDriver.Size = new System.Drawing.Size(17, 19);
+            this.availableDriver.TabIndex = 78;
+            this.availableDriver.Text = "0";
             // 
-            // selection_helper_column
+            // button1
             // 
-            this.selection_helper_column.HeaderText = "Selection";
-            this.selection_helper_column.Name = "selection_helper_column";
-            this.selection_helper_column.ReadOnly = true;
+            this.button1.Location = new System.Drawing.Point(731, 372);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 79;
+            this.button1.Text = "Continue";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(678, 157);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 19);
+            this.label8.TabIndex = 80;
+            this.label8.Text = "Selected Driver";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(678, 217);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(97, 19);
+            this.label9.TabIndex = 81;
+            this.label9.Text = "Selected EMT";
+            // 
+            // selectedDriver
+            // 
+            this.selectedDriver.AutoSize = true;
+            this.selectedDriver.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedDriver.Location = new System.Drawing.Point(687, 187);
+            this.selectedDriver.Name = "selectedDriver";
+            this.selectedDriver.Size = new System.Drawing.Size(17, 19);
+            this.selectedDriver.TabIndex = 82;
+            this.selectedDriver.Text = "0";
+            // 
+            // selectedEmt
+            // 
+            this.selectedEmt.AutoSize = true;
+            this.selectedEmt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedEmt.Location = new System.Drawing.Point(687, 245);
+            this.selectedEmt.Name = "selectedEmt";
+            this.selectedEmt.Size = new System.Drawing.Size(17, 19);
+            this.selectedEmt.TabIndex = 83;
+            this.selectedEmt.Text = "0";
+            // 
+            // id_emt
+            // 
+            this.id_emt.HeaderText = "ID";
+            this.id_emt.Name = "id_emt";
+            this.id_emt.ReadOnly = true;
+            // 
+            // nameEMT
+            // 
+            this.nameEMT.HeaderText = "Name";
+            this.nameEMT.Name = "nameEMT";
+            this.nameEMT.ReadOnly = true;
             // 
             // dispatch_ambulance
             // 
@@ -284,35 +279,38 @@ namespace Emergency_Ammbulance_Service
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(840, 407);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.selectedEmt);
+            this.Controls.Add(this.selectedDriver);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.availableDriver);
+            this.Controls.Add(this.totalEmt);
+            this.Controls.Add(this.emtForDIspatch);
+            this.Controls.Add(this.driverForDispatch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.id_label);
+            this.Controls.Add(this.selectedVehichle);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Name = "dispatch_ambulance";
             this.Text = "dispatch_ambulance";
+            this.Load += new System.EventHandler(this.dispatch_ambulance_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverForDispatch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emtForDIspatch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label id_label;
+        private System.Windows.Forms.Label selectedVehichle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -321,20 +319,18 @@ namespace Emergency_Ammbulance_Service
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView driverForDispatch;
+        private System.Windows.Forms.DataGridView emtForDIspatch;
+        private System.Windows.Forms.Label totalEmt;
+        private System.Windows.Forms.Label availableDriver;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn plate_num_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn selection_column;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label selectedDriver;
+        private System.Windows.Forms.Label selectedEmt;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_driver_column;
         private System.Windows.Forms.DataGridViewTextBoxColumn status_driver_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn selection_driver_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_helper_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status_helper_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn selection_helper_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_emt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameEMT;
     }
 }

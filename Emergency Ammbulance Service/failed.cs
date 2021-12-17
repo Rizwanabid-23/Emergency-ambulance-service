@@ -20,8 +20,6 @@ namespace Emergency_Ammbulance_Service
         private void try_login(object sender, EventArgs e)
         {
             this.Hide();
-            loginForm f = new loginForm();
-            f.Show();
         }
     }
 }

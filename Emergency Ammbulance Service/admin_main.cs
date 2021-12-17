@@ -55,8 +55,6 @@ namespace Emergency_Ammbulance_Service
         private void log_out(object sender, EventArgs e)
         {
             this.Hide();
-            loginForm f = new loginForm();
-            f.Show();
         }
 
         private void add_employee(object sender, EventArgs e)

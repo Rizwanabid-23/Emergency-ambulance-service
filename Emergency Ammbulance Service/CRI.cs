@@ -30,6 +30,8 @@ namespace Emergency_Ammbulance_Service
         //public string Username { get; private set; }
         //public string password { get; private set; }
 
+        ambulance_Queue amb_queue = ambulance_Queue.vehichleQueueInstance();
+
         public EmpList lst = EmpList.Instance;
         public ambulance_list a_list = ambulance_list.vehichleInstance();
 
@@ -37,6 +39,7 @@ namespace Emergency_Ammbulance_Service
         {
             a_list.insert(a);
             this.Ahead = a_list.head;
+            amb_queue.addAmbulance(a.number);
         }
         public ambulance_vehicle get_amb_head()
         {
@@ -81,7 +84,7 @@ namespace Emergency_Ammbulance_Service
                 Enum.TryParse(shft, out shift);
                 Enum.TryParse(st, out status);
                 Enum.TryParse(type, out typ);
-                Employee emp = new Employee(id, name, rating, phone, CNIC, adress, shift, Status.Unavailable, typ, password);
+                Employee emp = new Employee(id, name, rating, phone, CNIC, adress, shift, status, typ, password);
                 add_employee(emp);
 
             }
@@ -111,7 +114,7 @@ namespace Emergency_Ammbulance_Service
             Employee y = this.head;
             while (y != null)
             {
-                if (y.name == name && y.pin == password)
+                if (y.name == name && y.pin == password && y.type == Type.CTWO)
                 {
                     return true;
                 }
@@ -119,6 +122,25 @@ namespace Emergency_Ammbulance_Service
             }
             return false;
         }
+
+
+        public Employee searchEmployee(string attrib, string keyword ,  Type type)
+        {
+
+            Employee employee = this.head;
+            while (employee != null)
+            {
+                if ((attrib == "Pass") && (keyword == employee.pin) && (employee.type == type))
+                {
+                    return employee;
+                }
+                employee = employee.next;
+            }
+            return null;
+        }
+
+
+
         public Employee searchEmployee(string attrib, string keyword)
         {
 
@@ -141,13 +163,18 @@ namespace Emergency_Ammbulance_Service
                 {
                     return employee;
                 }
+                else if ((attrib == "Pass") && (keyword == employee.pin))
+                {
+                    return employee;
+                }
 
                 employee = employee.next;
 
 
 
             }
-            return employee;
+          
+            return null;
         }
         public bool delete(Employee x)  // Here function overloading is used to overload delete person
         {                               // This will delete the employ which we want to search
@@ -183,6 +210,7 @@ namespace Emergency_Ammbulance_Service
                     av.setEmT(EMT);
                 }
                 a_list.insert(av);
+                amb_queue.addAmbulance(av.number);
             }
         }
     }

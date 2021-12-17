@@ -43,7 +43,6 @@ namespace Emergency_Ammbulance_Service
                 this.tail = veh;
                 this.QueueSize = this.QueueSize + 1;
             }
-
             else
             {
                 this.tail.next = veh;
@@ -53,15 +52,15 @@ namespace Emergency_Ammbulance_Service
             amb_List_Obj.updateStatusToAvailable(veh.number);
         }
 
-        public void dispatchAmbulance()   //Function to delete entry in deQueue
+        public ambulance_vehicle dispatchAmbulance()   //Function to delete entry in deQueue
         {
 
             this.QueueSize = this.QueueSize - 1;
-            string deleteData = "jkfg";
-            deleteData = this.head.number;
+            ambulance_vehicle deleteData;
+            deleteData = this.head;
             this.head = this.head.next;
-            amb_List_Obj.updateStatusToUnAvailable(deleteData);
-
+            amb_List_Obj.updateStatusToUnAvailable(deleteData.number);
+            return deleteData;
         }
 
         public int sizeOfQueue()  //This function will return size of Queue

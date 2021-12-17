@@ -19,17 +19,25 @@ namespace Emergency_Ammbulance_Service
             empName = nmae;
             label9.Visible = false;
             password_textbox.Visible = false;
-            showAttrib();
+            if (nmae != null)
+            {
+                showAttrib();
+            }
+            else { 
+                MessageBox.Show("Nothing Select to update");
+            }
+
         }
         private void showAttrib()
         {
+           
             ID_textbox.Text = empName.id.ToString();
             name_textbox.Text = empName.name.ToString();
             phone_textbox.Text = empName.phone.ToString();
             cnic_textbox.Text = empName.CNIC.ToString();
             adress_textbox.Text = empName.address.ToString();
             employedas_combobox.Text = empName.type.ToString();
-            shift_combobox.Text= empName.shift.ToString();
+            shift_combobox.Text = empName.shift.ToString();
             if (empName.type == Type.CTWO)
             {
                 label9.Visible = true;
@@ -41,6 +49,10 @@ namespace Emergency_Ammbulance_Service
                 label9.Visible = true;
                 password_textbox.Visible = true;
             }
+            
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,6 +103,7 @@ namespace Emergency_Ammbulance_Service
         private void clear_button_Click(object sender, EventArgs e)
         {
             {
+                string empId = ID_textbox.Text;
                 foreach (var c in this.Controls)
                 {
                     if (c is TextBox)
@@ -98,6 +111,7 @@ namespace Emergency_Ammbulance_Service
                         ((TextBox)c).Text = String.Empty;
                     }
                 }
+                ID_textbox.Text = empId;
             }
         }
     }

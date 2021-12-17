@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Emergency_Ammbulance_Service
 {
@@ -363,4 +363,25 @@ class Queue
    
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }

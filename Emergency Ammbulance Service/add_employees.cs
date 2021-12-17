@@ -45,7 +45,7 @@ namespace Emergency_Ammbulance_Service
                 Employee emp;
                 if (employedas_combobox.Text == "CTWO")
                 {
-                   emp = new Employee(id, name, rating, phone, cnic, adress, shift, Status.Unavailable, typ, password);
+                   emp = new Employee(id, name, rating, phone, cnic, adress, shift, Status.Available, typ, password);
                 }
                 else
                 {
@@ -92,6 +92,11 @@ namespace Emergency_Ammbulance_Service
                 password_textbox.Visible = false;
                 label9.Visible = false;
             }
+        }
+
+        private void add_employees_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

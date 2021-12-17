@@ -139,25 +139,7 @@ namespace Emergency_Ammbulance_Service
 
 
 
-    class CRI:person {
-        
-        private string userName;
-        private string password;
 
-        public CRI(string name, int phone, int cnic , string address) {
-            this.name = name;
-            this.address = address;
-            this.CNIC = cnic;
-            this.phone = phone;
-        }
-        LinkList l = new LinkList();
-        
-        public void addEmployee(int id, string name, int phone, int cnic, string address, int shift, string status, int pin){
-            Employee emply = new Employee(id, name, phone, cnic, address, shift, status, pin);
-            l.insertAtHead(emply);
-
-        }    
-    }
 
 
 

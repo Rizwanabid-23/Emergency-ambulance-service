@@ -23,29 +23,46 @@ namespace Emergency_Ammbulance_Service
 
         private void login_clicked(object sender, EventArgs e)
         {
+     
             string username = login_user_box.Text;
             string password = login_password.Text;
+            Employee employee;
             string check = verify_user(username, password);
+            
+            
+           
             if(check=="admin")
             {
-                this.Hide();
+     
                 admin_main admin = new admin_main();
                 admin.Show();
             }
             else if(check == "employee")
             {
-                this.Hide();
+
+       
                 employee_main employ = new employee_main();
-                employ.Show();
+                if (login_user_box.Text != null && password != null && check != " ")
+                {
+                    employee = cRI.searchEmployee("Pass", password , Type.CTWO);
+                    employ.setEMp(employee);
+                    employ.Show();
+
+                }
+                
+                
             }
             else
             {
-                this.Hide();
+                
                 failed f = new failed();
                 f.Show();
             }
-
+            login_user_box.Clear();
+            login_password.Clear();
         }
+
+        
         private bool verify_employee(string username,string pin)
         {
             
@@ -87,6 +104,15 @@ namespace Emergency_Ammbulance_Service
                 login_password.PasswordChar = '*';
             }
             
+        }
+
+        private void closeFormBtn_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure want to exit program ?", "Exit", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+
+                Application.Exit();
+            }
         }
     }
 }

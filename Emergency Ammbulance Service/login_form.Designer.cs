@@ -38,6 +38,7 @@ namespace Emergency_Ammbulance_Service
             this.login_password = new System.Windows.Forms.TextBox();
             this.pin_checkBox = new System.Windows.Forms.CheckBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.closeFormBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -132,12 +133,23 @@ namespace Emergency_Ammbulance_Service
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.login_clicked);
             // 
+            // closeFormBtn
+            // 
+            this.closeFormBtn.Location = new System.Drawing.Point(843, 1);
+            this.closeFormBtn.Name = "closeFormBtn";
+            this.closeFormBtn.Size = new System.Drawing.Size(25, 22);
+            this.closeFormBtn.TabIndex = 9;
+            this.closeFormBtn.Text = "X";
+            this.closeFormBtn.UseVisualStyleBackColor = true;
+            this.closeFormBtn.Click += new System.EventHandler(this.closeFormBtn_Click);
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(868, 410);
+            this.ClientSize = new System.Drawing.Size(868, 395);
+            this.Controls.Add(this.closeFormBtn);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.pin_checkBox);
             this.Controls.Add(this.login_password);
@@ -147,6 +159,7 @@ namespace Emergency_Ammbulance_Service
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "loginForm";
             this.Text = "Emergency Ambulance Service";
             this.Load += new System.EventHandler(this.loginForm_Load);
@@ -168,6 +181,7 @@ namespace Emergency_Ammbulance_Service
         private System.Windows.Forms.TextBox login_password;
         private System.Windows.Forms.CheckBox pin_checkBox;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button closeFormBtn;
     }
 }
 

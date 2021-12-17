@@ -12,6 +12,7 @@ namespace Emergency_Ammbulance_Service
 {
     public partial class employee_main : Form
     {
+        Employee loggedin;
         public employee_main()
         {
             InitializeComponent();
@@ -20,15 +21,11 @@ namespace Emergency_Ammbulance_Service
         private void log_out(object sender, EventArgs e)
         {
             this.Hide();
-            loginForm login = new loginForm();
-            login.Show();
         }
 
         private void profile_click(object sender, EventArgs e)
         {
-            this.Hide();
-            employee_main profile = new employee_main();
-            profile.Show();
+            this.Show();
         }
 
         private void call_center_click(object sender, EventArgs e)
@@ -60,8 +57,28 @@ namespace Emergency_Ammbulance_Service
             callLogs.Show();
         }
 
+        public void setEMp(Employee logdin)
+        {
+            this.loggedin = logdin;   
+        }
         private void profile_load(object sender, EventArgs e)
         {
+            try
+            {
+                id_label.Text = loggedin.id.ToString();
+                name_label.Text = loggedin.name;
+                rating_label.Text = loggedin.rating.ToString();
+                postion_label.Text = loggedin.type.ToString();
+                shift_label.Text = loggedin.shift.ToString();
+                phone_label.Text = loggedin.phone.ToString();
+            }
+            catch(NullReferenceException)
+            {
+                MessageBox.Show("Not Found");
+            }
+            
+
+
 
         }
     }
