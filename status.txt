@@ -1,0 +1,27 @@
+Completed Tasks:
+-CRUD Operations on Employees (LinkList)
+-CRUD Operations on Vehicles  (LinkList)
+-Manage Shifts
+-Call Logs (Stack)
+-Get Caller info (Binary Search Tree)
+-Save Data (BST)
+-Dispatch Ambulence(Queue)
+-Emergency Caller Form (ECF)
+-Patient info form
+-Current Status
+-File Handling
+
+Improvements:
+-Periodic attendance could be introduced so we may see attintiveness of Employees.
+-Management multiple requests by queueing them in system.
+-Content in call logs could be used to view elaborated information 
+ about Patients and assigned people.
+-Shift could be automatically changed.
+-EMTs could be given access to solution so they can fill in informaion.
+-Employee performance could be tracked on the basis of Correct Dispatch, Wrong Dispatch etc
+
+Not Done:
+Employee Performance
+Minimum Path
+Parking could not be visulized but was done by Queue
+
