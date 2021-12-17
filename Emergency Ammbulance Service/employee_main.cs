@@ -76,10 +76,6 @@ namespace Emergency_Ammbulance_Service
             {
                 MessageBox.Show("Not Found");
             }
-            
-
-
-
         }
     }
 }

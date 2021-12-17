@@ -29,6 +29,7 @@ namespace Emergency_Ammbulance_Service
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@ namespace Emergency_Ammbulance_Service
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -306,6 +308,12 @@ namespace Emergency_Ammbulance_Service
             this.textBox1.Size = new System.Drawing.Size(132, 20);
             this.textBox1.TabIndex = 79;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1500;
+            this.timer1.Tick += new System.EventHandler(this.time_changer);
+            // 
             // current_status
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,5 +378,6 @@ namespace Emergency_Ammbulance_Service
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

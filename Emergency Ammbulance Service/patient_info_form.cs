@@ -27,5 +27,19 @@ namespace Emergency_Ammbulance_Service
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            PatientList p = PatientList.patInstance();
+            string na = patient_name_textbox.Text;
+            string co = patient_contact_textbox.Text;
+            string cn = patient_cnic_textbox.Text;
+            string ho = patient_hospital_textbox.Text;
+            string re = reportedby_textbox.Text;
+            PatientData pData = new PatientData(na, ho, re, co, cn);
+            p.insert(pData);
+            
+        }
     }
 }

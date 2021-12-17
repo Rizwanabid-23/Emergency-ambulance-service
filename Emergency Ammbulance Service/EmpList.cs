@@ -22,7 +22,21 @@ namespace Emergency_Ammbulance_Service
                 return instance;
             }
         }
+        public int getTotal(Type typ)
+        {
+            Employee h = this.head;
+            int counter = 0;
+            while (h != null)
+            {
+                if ((h.type == typ))
+                {
+                    counter = counter+1;
 
+                }
+                h = h.next;
+            }
+            return counter;
+        }
         public List<Employee> getAvailableList(Type typ)
         {
             List<Employee> availableEmp = new List<Employee>();

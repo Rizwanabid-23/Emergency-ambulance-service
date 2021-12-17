@@ -36,13 +36,11 @@ namespace Emergency_Ammbulance_Service
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.patient_name_textbox = new System.Windows.Forms.TextBox();
             this.reportedby_textbox = new System.Windows.Forms.TextBox();
-            this.patient_id_textbox = new System.Windows.Forms.TextBox();
             this.patient_contact_textbox = new System.Windows.Forms.TextBox();
             this.patient_hospital_textbox = new System.Windows.Forms.TextBox();
             this.patient_cnic_textbox = new System.Windows.Forms.TextBox();
@@ -124,16 +122,6 @@ namespace Emergency_Ammbulance_Service
             this.label5.TabIndex = 14;
             this.label5.Text = "Reported by";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(341, 122);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 19);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "ID";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -148,7 +136,7 @@ namespace Emergency_Ammbulance_Service
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(341, 260);
+            this.label9.Location = new System.Drawing.Point(339, 120);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 19);
             this.label9.TabIndex = 18;
@@ -178,13 +166,6 @@ namespace Emergency_Ammbulance_Service
             this.reportedby_textbox.Size = new System.Drawing.Size(100, 20);
             this.reportedby_textbox.TabIndex = 21;
             // 
-            // patient_id_textbox
-            // 
-            this.patient_id_textbox.Location = new System.Drawing.Point(573, 123);
-            this.patient_id_textbox.Name = "patient_id_textbox";
-            this.patient_id_textbox.Size = new System.Drawing.Size(100, 20);
-            this.patient_id_textbox.TabIndex = 22;
-            // 
             // patient_contact_textbox
             // 
             this.patient_contact_textbox.Location = new System.Drawing.Point(573, 188);
@@ -194,7 +175,7 @@ namespace Emergency_Ammbulance_Service
             // 
             // patient_hospital_textbox
             // 
-            this.patient_hospital_textbox.Location = new System.Drawing.Point(573, 259);
+            this.patient_hospital_textbox.Location = new System.Drawing.Point(573, 119);
             this.patient_hospital_textbox.Name = "patient_hospital_textbox";
             this.patient_hospital_textbox.Size = new System.Drawing.Size(100, 20);
             this.patient_hospital_textbox.TabIndex = 24;
@@ -214,6 +195,7 @@ namespace Emergency_Ammbulance_Service
             this.button1.TabIndex = 26;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // clear_button
             // 
@@ -236,13 +218,11 @@ namespace Emergency_Ammbulance_Service
             this.Controls.Add(this.patient_cnic_textbox);
             this.Controls.Add(this.patient_hospital_textbox);
             this.Controls.Add(this.patient_contact_textbox);
-            this.Controls.Add(this.patient_id_textbox);
             this.Controls.Add(this.reportedby_textbox);
             this.Controls.Add(this.patient_name_textbox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -268,13 +248,11 @@ namespace Emergency_Ammbulance_Service
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox patient_name_textbox;
         private System.Windows.Forms.TextBox reportedby_textbox;
-        private System.Windows.Forms.TextBox patient_id_textbox;
         private System.Windows.Forms.TextBox patient_contact_textbox;
         private System.Windows.Forms.TextBox patient_hospital_textbox;
         private System.Windows.Forms.TextBox patient_cnic_textbox;

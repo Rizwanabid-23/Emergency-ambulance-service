@@ -148,6 +148,8 @@
       <DependentUpon>path.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient.cs" />
+    <Compile Include="PatientData.cs" />
+    <Compile Include="PatientList.cs" />
     <Compile Include="patient_info_form.cs">
       <SubType>Form</SubType>
     </Compile>
