@@ -24,3 +24,14 @@ C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulanc
 C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.CoreCompileInputs.cache
 C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.exe
 C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.pdb
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.call_center.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.current_status.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.parking.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.patient_info_form.resources
+E:\FINAL TERM\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.UserControl1.resources
+C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency Ammbulance Service.csproj.AssemblyReference.cache
+C:\Users\Muhammad Talha\OneDrive\Documents\GitHub\dsa2021g34\Emergency Ammbulance Service\obj\Debug\Emergency_Ammbulance_Service.UserControl1.resources
+>>>>>>> Stashed changes
